@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>GeoGuard</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="keywords" />
+    <meta content="" name="description" />
+
+    <!-- Favicons 
+    <link
+      href="{{ url_for('static', filename='img/favicon-2.png') }}"
+      rel="icon"
+    />
+    <link href="img/apple-touch-icon.png" rel="apple-touch-icon" />
+    -->
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,500,600,700,700i|Montserrat:300,400,500,600,700"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap CSS File -->
+    <link
+      href="{{ url_for('static', filename='lib/bootstrap/css/bootstrap.min.css') }}"
+      rel="stylesheet"
+    />
+
+    <!-- Libraries CSS Files -->
+    <link
+      href="{{ url_for('static', filename='lib/font-awesome/css/font-awesome.min.css') }}"
+      rel="stylesheet"
+    />
+    <link
+      href="{{ url_for('static', filename='lib/animate/animate.min.css') }}"
+      rel="stylesheet"
+    />
+    <link
+      href="{{ url_for('static', filename='lib/ionicons/css/ionicons.min.css') }}"
+      rel="stylesheet"
+    />
+    <link
+      href="{{ url_for('static', filename='lib/owlcarousel/assets/owl.carousel.min.css') }}"
+      rel="stylesheet"
+    />
+    <link
+      href="{{ url_for('static', filename='lib/lightbox/css/lightbox.min.css') }}"
+      rel="stylesheet"
+    />
+    <!-- Main Stylesheet File -->
+    <link
+      href="{{ url_for('static', filename='css/style.css') }}"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!--==========================
+  Header
+  ============================-->
+    <header id="header">
+      <div id="topbar">
+        <div class="container">
+          <div class="social-links">
+            <!-- <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+            <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+            <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+            <a href="#" class="instagram"><i class="fa fa-instagram"></i></a> -->
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="logo float-left">
+          <a href="home.html" class="scrollto"
+            ><img
+              style="margin-top: -5px; min-height: 100px; width: auto;"
+              src="{{ url_for('static', filename='img/logo.png') }}"
+              alt=""
+              class="img-fluid"
+          /></a>
+        </div>
+
+   
+        <nav class="main-nav float-right d-none d-lg-block">
+          <ul>
+            <li class="active"><a href="home.html"><i class="fa fa-home"></i> Home</a></li>
+            <li><a  href="chatbot.html"><i class="fa fa-comments"></i> Chatbot</a></li>
+            <li><a   href="predicts.html"><i class="fa fa-eye"></i> Predict</a></li>
+            <li><a  href="disaster_awareness.html"><i class="fa fa-exclamation-triangle"></i> Awareness</a></li>
+            <li><a  href="accuracy.html"><i class="fa fa-bullseye"></i> Accuracy</a></li>
+          </ul>
+        </nav>
+        <!-- .main-nav -->
+      </div>
+    </header>
+    <!-- #header -->
+
+    <!--==========================
+    Intro Section
+  ============================-->
+    <section id="intro" class="clearfix">
+      <div class="container d-flex h-100">
+        <div class="row justify-content-center align-self-center">
+          <div class="col-md-5 intro-info order-md-first order-last" style="background-color: transparent;padding-right:50px;">
+            <a href="#header" class="scrollto"
+            ><img
+              style="margin-top: 0px; max-height: 150px;"
+              src="{{ url_for('static', filename='img/logo.png') }}"
+              alt=""
+              class="img-fluid"
+          /></a>
+            <h3 style="padding-top:30px;padding-left:10px;line-height: 40px;">It's concise, memorable, and conveys the idea of protection and vigilance in flood detection using advanced technology.</h3>
+            <br />
+            <div style="padding-left:10px;">
+              <a href="#about" class="btn-get-started scrollto">Get Started</a>
+            </div>
+          </div>
+
+          <div class="col-md-7 intro-img order-md-last order-first" style="background-color: transparent;">
+            <img src="{{ url_for('static', filename='img/2.jpg') }}" width="750" height="500" alt="Flood Detection Machine Learning Project">
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- #intro -->
+
+    <main id="main">
+      <!--==========================
+      About Us Section
+    ============================-->
+      <section id="about">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-5 col-md-6">
+              <div class="about-img">
+                <img
+                  src="{{ url_for('static', filename='img/4.jpg') }}"
+                  alt=""
+                />
+              </div>
+            </div>
+
+            <div class="col-lg-7 col-md-6">
+              <div class="about-content">
+                <h2>About GeoGuard</h2>
+                <h3>
+                  A web application designed to assist users and governments in preparing for and reallocating resources for flood events
+                </h3>
+                <p>
+                  Floods are among the most perilous and frequent natural disasters globally.
+                </p>
+                <p>
+                  Annually, floods claim thousands of lives and displace millions, stripping them of their homes and livelihoods. Notably, regions such as various Indian states and China's Yellow River Valley have experienced some of the deadliest floods, resulting in massive casualties.
+                </p>
+                <p>
+                  In response to this pressing issue, our team developed FloodGuard. This tool predicts floods and their potential impacts before they occur. The predictions are then presented in an interactive graphical format, making the data compelling and easily comprehensible for both the public and government authorities.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+      <!--==========================
+      Services Section
+    ============================-->
+    <section id="services" class="section-bg">
+      <div class="container">
+        <header class="section-header">
+          <h3>Services</h3>
+          <p>
+            Our website offers many services to help people plan and prepare for floods,
+            and help the government reallocate resources to those most in need.
+          </p>
+        </header>
+
+        <div class="row">
+          <div
+            class="col-md-6 col-lg-3 wow bounceInUp"
+            data-wow-duration="1.4s"
+          >
+            <div class="box" style="height: 320px;">
+              <div class="icon" style="background: #fceef3;">
+                <i
+                  class="ion-ios-analytics-outline"
+                  style="color: #ff689b;"
+                ></i>
+              </div>
+              <h4 class="title"><a href="disaster_awareness.html">Awareness</a></h4>
+              <p class="description">
+                On our website, shares safety tips, emergency contacts, and flood and landslide information
+              </p>
+            </div>
+            
+          </div>
+          
+          <div
+            class="col-md-6 col-lg-3 wow bounceInUp"
+            data-wow-delay="0.1s"
+            data-wow-duration="1.4s"
+          >
+            <div class="box" style="height: 320px;">
+              <div class="icon" style="background: #eafde7;">
+                <i
+                  class="ion-ios-speedometer-outline"
+                  style="color: #41cf2e;"
+                ></i>
+              </div>
+              <h4 class="title"><a href="chatbot.html">GeoGuard chatbot</a></h4>
+              <p class="description">
+                Chat with our bot for safety tips, emergency contacts, and info on floods and landslides.
+              </p>
+            </div>
+          </div>
+
+          <div
+          class="col-md-6 col-lg-3 wow bounceInUp"
+          data-wow-delay="0.1s"
+          data-wow-duration="1.4s"
+        >
+          <div class="box" style="height: 320px;">
+            <div class="icon" style="background: #eafde7;">
+              <i
+                class="ion-ios-speedometer-outline"
+                style="color: #41cf2e;"
+              ></i>
+            </div>
+            <h4 class="title"><a href="accuracy.html">Accuracy</a></h4>
+            <p class="description">
+              Accuracy page shows the prediction score, training features, and project architecture.
+            </p>
+          </div>
+          </div>
+
+          <div
+            class="col-md-6 col-lg-3 wow bounceInUp"
+            data-wow-delay="0.1s"
+            data-wow-duration="1.4s"
+          >
+            <div class="box" style="height: 320px;">
+              <div class="icon" style="background: #e6fdfc;">
+                <i class="ion-ios-paper-outline" style="color: #3fcdc7;"></i>
+              </div>
+              <h4 class="title"><a href="predicts.html">Predict Floods</a></h4>
+              <p class="description">
+                Lastly, our website allows you to predict floods in realtime through our machine learning algorithm.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

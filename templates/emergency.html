@@ -1,0 +1,260 @@
+{% extends 'layout.html' %}
+
+{% block title %} - Emergency Contacts{% endblock %}
+
+{% block content %}
+<div class="container">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light mb-4 shadow-sm border-bottom">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{{ url_for('index') }}">
+                <i class="fas fa-shield-alt me-2 text-primary"></i>Disaster Awareness Portal</a>
+            <button class="navbar-toggler" type="button" id="mobile-menu-toggle" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="d-flex flex-column align-items-end ms-auto">
+                <ul class="navbar-nav flex-row">
+                    <li class="nav-item"><a class="nav-link text-purple" href="{{ url_for('home') }}"><i class="fas fa-home"></i> HOME</a></li>
+                    <li class="nav-item"><a class="nav-link text-purple" href="chatbot.html"><i class="fa fa-comments"></i> CHATBOT</a></li>
+                    <li class="nav-item"><a class="nav-link text-purple" href="predicts.html"><i class="fa fa-eye"></i> PREDICT</a></li>
+                    <li class="nav-item"><a class="nav-link text-purple" href="disaster_awareness.html"><i class="fa fa-exclamation-triangle"></i> AWARENESS</a></li>
+                    <li class="nav-item"><a class="nav-link text-purple" href="accuracy.html"><i class="fa fa-bullseye"></i> ACCURACY</a></li>
+                </ul>
+                <ul class="navbar-nav flox-row mt-2">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('quiz') }}">
+                            <i class="fas fa-question-circle me-1 text-primary"></i> Quiz
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('game') }}">
+                            <i class="fas fa-gamepad me-1 text-success"></i> Game
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('videos') }}">
+                            <i class="fas fa-video me-1 text-info"></i> Videos
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="{{ url_for('emergency') }}">
+                            <i class="fas fa-phone-alt me-1 text-danger"></i> Emergency
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <h1 class="mb-4 text-center">Emergency Contacts</h1>
+    <p class="lead text-center mb-5">
+        Keep these important emergency contacts handy. In an emergency, knowing who to call can save lives.
+    </p>
+
+    <!-- Emergency Contact Selection -->
+    <div class="card mb-5">
+        <div class="card-header bg-danger text-white">
+            <h3 class="mb-0"><i class="fas fa-phone-alt me-2"></i>India Emergency Helpline Selector</h3>
+        </div>
+        <div class="card-body">
+            <div class="row align-items-center">
+                <div class="col-md-6 mb-3 mb-md-0">
+                    <p>Select your state to view relevant emergency contacts, or view national emergency numbers for India.</p>
+                    <p><strong>Remember:</strong> In immediate danger, always call 112 first.</p>
+                    <div class="alert alert-info">
+                        <i class="fas fa-info-circle me-2"></i> India now uses <strong>112</strong> as the unified emergency number for all emergencies.
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="stateSelector" class="form-label">Select Indian State/Union Territory:</label>
+                        <select id="stateSelector" class="form-select form-select-lg">
+                            <option value="National">National (All India)</option>
+                            
+                            <optgroup label="States">
+                                {% for state in regular_states %}
+                                <option value="{{ state }}">{{ state }}</option>
+                                {% endfor %}
+                            </optgroup>
+                            
+                            <optgroup label="Union Territories">
+                                {% for ut in union_territories %}
+                                <option value="{{ ut }}">{{ ut }}</option>
+                                {% endfor %}
+                            </optgroup>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Emergency Contact Sections -->
+    {% for state, contact_list in contacts.items() %}
+    <div id="{{ state }}-contacts" class="contact-section {% if state != 'National' %}d-none{% endif %}">
+        <h2 class="mb-4">{{ state }} Emergency Contacts</h2>
+        <div class="row g-4">
+            {% for contact in contact_list %}
+            <div class="col-md-6 col-lg-4">
+                <div class="card emergency-contact h-100">
+                    <div class="card-body">
+                        <h4 class="card-title">{{ contact.name }}</h4>
+                        <p class="card-text">{{ contact.description }}</p>
+                        <p class="phone-number fs-4 text-danger">{{ contact.number }}</p>
+                        <a href="tel:{{ contact.number }}" class="btn btn-danger">
+                            <i class="fas fa-phone me-2"></i> Call Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% endfor %}
+
+    <!-- Emergency Preparedness Tips -->
+    <div class="card mt-5">
+        <div class="card-header bg-warning">
+            <h3 class="mb-0"><i class="fas fa-exclamation-triangle me-2"></i>Emergency Preparedness Tips</h3>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Before an Emergency:</h4>
+                    <ul class="list-group mb-4">
+                        <li class="list-group-item">
+                            <i class="fas fa-check-circle text-success me-2"></i>
+                            Program emergency numbers into your phone
+                        </li>
+                        <li class="list-group-item">
+                            <i class="fas fa-check-circle text-success me-2"></i>
+                            Create a family emergency plan with meeting points
+                        </li>
+                        <li class="list-group-item">
+                            <i class="fas fa-check-circle text-success me-2"></i>
+                            Prepare an emergency kit with essentials
+                        </li>
+                        <li class="list-group-item">
+                            <i class="fas fa-check-circle text-success me-2"></i>
+                            Learn first aid and CPR if possible
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <h4>During an Emergency:</h4>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <i class="fas fa-check-circle text-success me-2"></i>
+                            Stay calm and assess the situation
+                        </li>
+                        <li class="list-group-item">
+                            <i class="fas fa-check-circle text-success me-2"></i>
+                            Call the appropriate emergency number
+                        </li>
+                        <li class="list-group-item">
+                            <i class="fas fa-check-circle text-success me-2"></i>
+                            Provide clear, concise information to dispatchers
+                        </li>
+                        <li class="list-group-item">
+                            <i class="fas fa-check-circle text-success me-2"></i>
+                            Follow instructions from emergency personnel
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Indian Emergency Numbers -->
+    <div class="card mt-5">
+        <div class="card-header bg-info">
+            <h3 class="mb-0"><i class="fas fa-globe me-2"></i>Indian Emergency Numbers</h3>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Service</th>
+                            <th>Number</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Universal Emergency</strong></td>
+                            <td class="text-danger fw-bold">112</td>
+                            <td>Unified emergency number for all emergency services across India</td>
+                        </tr>
+                        <tr>
+                            <td>Police</td>
+                            <td>100</td>
+                            <td>Police emergency services</td>
+                        </tr>
+                        <tr>
+                            <td>Fire</td>
+                            <td>101</td>
+                            <td>Fire emergency services</td>
+                        </tr>
+                        <tr>
+                            <td>Ambulance</td>
+                            <td>108</td>
+                            <td>Medical emergency services</td>
+                        </tr>
+                        <tr>
+                            <td>Women Helpline</td>
+                            <td>1091</td>
+                            <td>Emergency assistance for women</td>
+                        </tr>
+                        <tr>
+                            <td>Disaster Management</td>
+                            <td>1078</td>
+                            <td>National disaster management helpline</td>
+                        </tr>
+                        <tr>
+                            <td>Railway Accident</td>
+                            <td>1072</td>
+                            <td>For accidents related to railways</td>
+                        </tr>
+                        <tr>
+                            <td>Road Accident</td>
+                            <td>1073</td>
+                            <td>For reporting road accidents</td>
+                        </tr>
+                        <tr>
+                            <td>Relief Commissioner</td>
+                            <td>1070</td>
+                            <td>State disaster relief commissioner</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const stateSelector = document.getElementById('stateSelector');
+        
+        stateSelector.addEventListener('change', function() {
+            // Hide all contact sections
+            document.querySelectorAll('.contact-section').forEach(section => {
+                section.classList.add('d-none');
+            });
+            
+            // Show the selected state's contacts
+            const selectedState = this.value;
+            const contactSection = document.getElementById(selectedState + '-contacts');
+            
+            if (contactSection) {
+                contactSection.classList.remove('d-none');
+            } else {
+                document.getElementById('national-contacts').classList.remove('d-none');
+            }
+        });
+    });
+</script>
+{% endblock %}
