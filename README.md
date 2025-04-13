@@ -10,7 +10,7 @@ The landslide prediction model employs machine learning techniques to analyze th
 time-series analysis and regression techniques are used to forecast food production and potential shortages. The models are
 validated using real-world data from high-risk regions, and the
 results demonstrate a significant improvement in prediction accuracy compared to traditional methods.
-By combining spatial data, such as topographical and land use information, with temporal patterns in rainfall, soil moisture, and river water levels, the proposed model aims to enhance
+By combining spatial data, such as topographical and land use information, with temporal patterns in rainfall, soil moisture, and river water levels, the proposed model aims to enhance
 prediction accuracy. The model is trained and validated using
 historical data from flood- and landslide-prone regions in India,
 with a focus on improving early warning systems. Preliminary
