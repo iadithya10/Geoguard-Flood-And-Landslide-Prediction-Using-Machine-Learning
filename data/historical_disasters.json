@@ -1,0 +1,412 @@
+{
+  "flood": [
+    {
+      "year": "2023",
+      "location": "Kerala",
+      "description": "The 2023 Kerala floods hit several districts including Wayanad, Idukki, and Kozhikode after intense monsoon rainfall. Over 40 people died in landslides and flash floods, with thousands evacuated to relief camps. Infrastructure damage included collapsed bridges and washed-out roads across the state."
+    },
+    {
+      "year": "2023",
+      "location": "Himachal Pradesh",
+      "description": "In July 2023, Himachal Pradesh experienced catastrophic floods and landslides from unprecedented monsoon rains. Over 200 people died, with significant damage to infrastructure including roads, bridges, and buildings. The estimated economic loss was over ₹10,000 crore."
+    },
+    {
+      "year": "2022",
+      "location": "Assam",
+      "description": "The 2022 Assam floods affected over 3 million people across 32 districts. More than 200 people died, and approximately 90,000 hectares of cropland was damaged. Over 2,000 villages were submerged with thousands forced to live in relief camps."
+    },
+    {
+      "year": "2021",
+      "location": "Maharashtra",
+      "description": "Heavy monsoon rains caused severe flooding in Maharashtra's Konkan region, especially in Raigad, Ratnagiri, and Kolhapur districts. Over 250 people died, most in landslides in Raigad district. Thousands of villages were submerged with damages exceeding ₹4,000 crore."
+    },
+    {
+      "year": "2020",
+      "location": "Bihar",
+      "description": "The 2020 Bihar floods affected 8.3 million people across 16 districts. At least 27 people died, and more than 400,000 people were evacuated. The floods damaged over 50,000 homes and destroyed 328,000 hectares of agricultural land."
+    },
+    {
+      "year": "2020",
+      "location": "Assam",
+      "description": "The Brahmaputra River overflow caused devastating floods in Assam, affecting 5.7 million people across 30 districts. Over 100 people died, 150,000 were displaced, and the floods caused severe damage to wildlife in Kaziranga National Park, where 150 animals died."
+    },
+    {
+      "year": "2019",
+      "location": "Karnataka and Maharashtra",
+      "description": "Severe flooding affected western and southern India, particularly Karnataka and Maharashtra. Over 200 people died, and more than 1.2 million people were evacuated. Economic losses were estimated at ₹30,000 crore."
+    },
+    {
+      "year": "2019",
+      "location": "Bihar",
+      "description": "The 2019 Bihar floods affected 13 districts, impacting 8 million people. At least 130 people died, with Sitamarhi district suffering the most casualties. The floods damaged 55,000 homes and affected 400,000 hectares of agricultural land."
+    },
+    {
+      "year": "2018",
+      "location": "Kerala",
+      "description": "The catastrophic 2018 Kerala floods were the worst in nearly a century, affecting all 14 districts. Heavy monsoon rainfall (42% above normal) combined with dam water releases caused widespread flooding. Over 483 people died, 140 were missing, and 1 million were evacuated. Economic losses reached ₹31,000 crore (US$4.4 billion), with approximately 10,000 km of roads and 100,000 buildings damaged."
+    },
+    {
+      "year": "2017",
+      "location": "Gujarat",
+      "description": "Severe floods in Gujarat affected 4.5 million people and killed over 220. The floods damaged infrastructure and agriculture, with economic losses estimated at ₹20,000 crore. Major cities like Ahmedabad and Rajkot were severely flooded."
+    },
+    {
+      "year": "2017",
+      "location": "Bihar",
+      "description": "The 2017 Bihar floods affected 19 districts, impacting 17 million people. Over 500 people died, and 850,000 people were evacuated. The floods destroyed approximately 400,000 hectares of cropland."
+    },
+    {
+      "year": "2016",
+      "location": "Assam",
+      "description": "The 2016 Assam floods affected 1.8 million people across 22 districts. Approximately 40 people died, and the floods damaged over 200,000 hectares of cropland. The Brahmaputra and other rivers breached embankments in multiple locations."
+    },
+    {
+      "year": "2015",
+      "location": "Tamil Nadu (Chennai)",
+      "description": "The Chennai floods, caused by heavy rainfall from the northeast monsoon, affected 3 million people. At least 500 people died, and 1.8 million people were displaced. Economic losses were estimated at ₹50,000 crore (US$7 billion), making it one of India's costliest natural disasters."
+    },
+    {
+      "year": "2014",
+      "location": "Jammu and Kashmir",
+      "description": "Severe flooding in Jammu and Kashmir affected 2,600 villages. At least The 2014 Kashmir floods affected 2,600 villages across the region. At least 300 people died, and 100,000 were rescued. The floods damaged 350,000 structures and caused economic losses of ₹5,700 crore."
+    },
+    {
+      "year": "2013",
+      "location": "Uttarakhand",
+      "description": "The Uttarakhand floods, triggered by early monsoon rains and cloudburst, caused devastating landslides and flash floods. Over 5,700 people were presumed dead, with thousands missing. Around 100,000 pilgrims and tourists were evacuated. The disaster destroyed roads, bridges, and infrastructure, with economic losses exceeding ₹10,000 crore. It was India's worst natural disaster since the 2004 tsunami."
+    },
+    {
+      "year": "2009",
+      "location": "Karnataka and Andhra Pradesh",
+      "description": "Severe floods affected northern Karnataka and Andhra Pradesh. Over 300 people died, and more than 2 million were displaced. The floods damaged 500,000 houses and destroyed crops on 2.5 million acres of land."
+    },
+    {
+      "year": "2008",
+      "location": "Bihar",
+      "description": "The Kosi River breach affected over 2.3 million people across 15 districts in Bihar. The flood was caused when the Kosi River changed its course after breaking an embankment. At least 434 people died, and the disaster destroyed 300,000 houses and damaged 840,000 acres of crops. About 989 villages were completely submerged."
+    },
+    {
+      "year": "2006",
+      "location": "Gujarat",
+      "description": "The 2006 Surat floods occurred when authorities released water from the Ukai Dam after heavy rainfall. The city of Surat was submerged under 10 feet of water for several days. At least 150 people died, and over 4 million were affected. Economic losses exceeded ₹21,000 crore."
+    },
+    {
+      "year": "2005",
+      "location": "Maharashtra (Mumbai)",
+      "description": "Mumbai experienced unprecedented rainfall on July 26, 2005, receiving 944 mm of rain in 24 hours, causing severe flooding across the city. Over 1,000 people died, and economic losses were estimated at US$2 billion. The city's infrastructure, including roads, railways, and the airport, was paralyzed. Over 100,000 vehicles were damaged, and thousands of people were stranded."
+    },
+    {
+      "year": "2004",
+      "location": "Bihar and Assam",
+      "description": "Floods in Bihar and Assam affected over 20 million people. At least 900 people died, and the floods damaged 600,000 houses and destroyed crops on 1.7 million hectares of land."
+    },
+    {
+      "year": "2002",
+      "location": "Assam",
+      "description": "The 2002 Assam floods affected 25 districts, impacting 8 million people. Approximately 130 people died, and 650,000 houses were damaged. The floods affected 2.5 million hectares of agricultural land."
+    },
+    {
+      "year": "2001",
+      "location": "Orissa",
+      "description": "Major floods affected coastal Orissa, impacting over 7 million people across 8,000 villages. About 100 people died, and the floods damaged 285,000 houses. Agricultural losses were estimated at ₹500 crore."
+    },
+    {
+      "year": "2000",
+      "location": "West Bengal",
+      "description": "Severe floods in West Bengal affected 21,000 villages and 21 million people. About 1,200 people died, and over 1.7 million houses were damaged. The floods affected 1.9 million hectares of agricultural land, causing economic losses of over ₹5,000 crore."
+    }
+  ],
+  "landslide": [
+    {
+      "year": "2023",
+      "location": "Wayanad, Kerala",
+      "description": "Devastating landslides hit Wayanad district in August 2023 following heavy monsoon rains. Over 200 people were killed when entire hillsides collapsed, burying the villages of Mundakkai and Chooralmala. Several hundred people were displaced, and rescue operations were hampered by destroyed infrastructure and continued rainfall."
+    },
+    {
+      "year": "2023",
+      "location": "Himachal Pradesh",
+      "description": "Multiple landslides occurred across Himachal Pradesh in July-August 2023 during record monsoon rainfall. Particularly severe incidents occurred in Shimla, Kullu and Mandi districts. Over 100 people died in landslides alone, with hundreds of buildings damaged and major highways blocked for weeks."
+    },
+    {
+      "year": "2022",
+      "location": "Manipur (Noney district)",
+      "description": "A massive landslide hit the Tupul railway construction site in Noney district in June 2022. At least 61 people died, including railway workers, Territorial Army personnel, and locals. The landslide was triggered by heavy monsoon rains and buried a railway station under construction."
+    },
+    {
+      "year": "2021",
+      "location": "Maharashtra (Raigad district)",
+      "description": "Multiple landslides struck villages in Raigad district in July 2021 after unprecedented rainfall. The worst-affected areas were Taliye, Sakharape, and Kevnale. At least 180 people died when entire villages were buried under mud and debris. Rescue operations were severely hampered by continued rain and difficult terrain."
+    },
+    {
+      "year": "2020",
+      "location": "Kerala (Idukki district)",
+      "description": "A massive landslide hit Pettimudi, a tea plantation settlement in Idukki district, in August 2020. At least 66 people died when a hillside collapsed after heavy monsoon rainfall, burying worker settlements. Four rows of estate houses were completely destroyed by mud and debris."
+    },
+    {
+      "year": "2020",
+      "location": "Assam (Cachar district)",
+      "description": "Multiple landslides in southern Assam in June 2020 killed at least 21 people across three districts: Cachar, Karimganj, and Hailakandi. The landslides were triggered by heavy pre-monsoon rains and affected areas on hill slopes where unauthorized construction had taken place."
+    },
+    {
+      "year": "2019",
+      "location": "Nilgiris, Tamil Nadu",
+      "description": "Landslides in the Nilgiris district killed at least 10 people and damaged over 300 homes in August 2019. The disaster was triggered by heavy rainfall exceeding 900mm over a few days. Major roads including NH-67 were blocked by debris, cutting off several hill settlements."
+    },
+    {
+      "year": "2018",
+      "location": "Kerala",
+      "description": "During the 2018 Kerala floods, numerous landslides occurred across hilly districts including Idukki and Wayanad. Over 100 people died specifically in landslides. The worst incident was in Kattippara, Kozhikode district, where 14 people from a single family died when their home was buried."
+    },
+    {
+      "year": "2017",
+      "location": "Mandi, Himachal Pradesh",
+      "description": "A massive landslide in Kotrupi village of Mandi district in August 2017 swept away two buses, killing 46 people. The landslide occurred on the Mandi-Pathankot highway following heavy rainfall. About 200 meters of the national highway was washed away in the disaster."
+    },
+    {
+      "year": "2016",
+      "location": "Arunachal Pradesh",
+      "description": "Multiple landslides in Tawang district killed at least 18 people and injured many others in April 2016. The landslides destroyed several residential buildings in Famla village. Triggered by unusually heavy pre-monsoon rains, the disaster also blocked the road connecting Tawang to the rest of the country."
+    },
+    {
+      "year": "2015",
+      "location": "Darjeeling, West Bengal",
+      "description": "Landslides in the Darjeeling hills killed at least 40 people and damaged over 100 houses in July 2015. Multiple villages were affected, with the worst impact in Mirik, Kalimpong, and Kurseong areas. Many victims were buried while sleeping when hillsides collapsed following three days of continuous rain."
+    },
+    {
+      "year": "2014",
+      "location": "Malin, Maharashtra",
+      "description": "A catastrophic landslide buried the village of Malin in Pune district on July 30, 2014. The landslide, triggered by heavy monsoon rainfall, buried 44 houses completely while residents were sleeping. 151 people died, and only a few survivors were rescued. Contributing factors included deforestation and terracing for agriculture on the steep slope above the village."
+    },
+    {
+      "year": "2013",
+      "location": "Uttarakhand",
+      "description": "During the Uttarakhand floods, massive landslides occurred across the state, particularly in Kedarnath Valley. Thousands died when landslides, often carrying massive boulders, swept away buildings, roads, and bridges. Many pilgrimage sites were devastated, and entire villages disappeared. The landslides destroyed over 2,500 houses completely and damaged critical infrastructure including 1,300 roads."
+    },
+    {
+      "year": "2010",
+      "location": "Ladakh",
+      "description": "Cloudbursts triggered catastrophic landslides and mudflows in Ladakh on August 6, 2010, affecting 71 towns and villages. The disaster killed 257 people, injured over 1,000, and destroyed critical infrastructure. Leh town was particularly affected when mud and debris flows swept through populated areas. The Indian Army played a crucial role in the rescue operations."
+    },
+    {
+      "year": "2009",
+      "location": "Kerala (Wayanad district)",
+      "description": "A major landslide hit Meppadi area in Wayanad district in July 2009, killing 15 people and destroying dozens of homes. The landslide was triggered by heavy monsoon rainfall and was exacerbated by deforestation in the region."
+    },
+    {
+      "year": "2007",
+      "location": "Mumbai, Maharashtra",
+      "description": "Landslides in hillside slums of Mumbai killed 30 people during heavy monsoon rainfall in July 2007. Most victims were from unauthorized settlements on steep slopes in areas like Ghatkopar and Sakinaka, where makeshift homes were buried under mud and debris."
+    },
+    {
+      "year": "2005",
+      "location": "Mumbai and surrounding areas",
+      "description": "During the 2005 Mumbai floods, multiple landslides occurred in the Mumbai-Pune region, particularly in areas like Kalyan, Mumbra, and hillside settlements in Mumbai. These landslides killed over 200 people, mostly in informal settlements on steep slopes that collapsed after extraordinary rainfall of 944mm in 24 hours."
+    },
+    {
+      "year": "2004",
+      "location": "Sikkim and North Bengal",
+      "description": "Landslides across Sikkim and North Bengal killed at least 20 people and damaged hundreds of homes in July 2004. Major roads were blocked for weeks, cutting off entire districts. The landslides were triggered by unusually heavy monsoon rainfall in the region."
+    },
+    {
+      "year": "2001",
+      "location": "Amboori, Kerala",
+      "description": "The Amboori landslide in Thiruvananthapuram district of Kerala killed 38 people on November 9, 2001. It was one of the deadliest landslides in Kerala's history before the 2018 disasters. The landslide occurred after continuous rainfall and swept away several homes in the hillside village."
+    }
+  ],
+  "tsunami": [
+    {
+      "year": "2004",
+      "location": "Tamil Nadu",
+      "description": "The 2004 Indian Ocean tsunami on December 26 devastated Tamil Nadu's coastline following a 9.1 magnitude earthquake near Sumatra. The tsunami hit the coast between 9:00 AM and 10:30 AM with wave heights of 5-10 meters. Nagapattinam district was worst affected with over 6,000 deaths, followed by Cuddalore, Kanyakumari, and Chennai. Fishing communities suffered the most severe impact, with over 44,000 fishing boats destroyed. The tsunami reached nearly 3 km inland in some coastal areas, destroying housing, infrastructure, and causing widespread salinization of agricultural lands."
+    },
+    {
+      "year": "2004",
+      "location": "Andaman & Nicobar Islands",
+      "description": "The Andaman & Nicobar Islands, being closest to the earthquake epicenter, experienced devastating tsunami waves within 30 minutes of the 9.1 magnitude earthquake on December 26, 2004. The southern Nicobar islands were worst affected, with Car Nicobar, Great Nicobar, and Katchal Islands suffering extensive damage. Waves up to 15 meters high completely submerged some islands, leading to about 3,500 deaths and 5,600 missing. Entire tribal communities were displaced, with the Nicobarese tribe losing about 10% of their population. The tsunami permanently altered the geography of several islands, with parts of some islands permanently submerged."
+    },
+    {
+      "year": "2004",
+      "location": "Kerala and Andhra Pradesh",
+      "description": "The 2004 tsunami also significantly impacted Kerala and Andhra Pradesh. In Kerala, the districts of Kollam, Alappuzha, and Ernakulam saw waves of 3-5 meters, killing approximately 170 people and damaging 8,000 houses. Andhra Pradesh was hit about 3 hours after the earthquake, with Prakasam and Krishna districts most affected. Around 105 people died in Andhra Pradesh, with the fishing hamlet of Suryalanka suffering the highest casualties. Both states experienced long-term economic impacts on fishing communities, tourism, and coastal agriculture."
+    },
+    {
+      "year": "2017",
+      "location": "Tamil Nadu",
+      "description": "A minor tsunami-like surge hit parts of the Tamil Nadu coast on December 2, 2017, following Cyclone Ockhi. While not a true tsunami, unusual wave activity with 1-2 meter waves was reported in Kanyakumari, Tuticorin, and Rameswaram, causing minor coastal flooding. No casualties were directly attributed to these waves."
+    },
+    {
+      "year": "2012",
+      "location": "Andaman Islands",
+      "description": "Following an 8.6 magnitude earthquake off the coast of Sumatra on April 11, 2012, a tsunami alert was issued for the Andaman Islands and India's eastern coast. Small tsunami waves of less than 0.5 meters were observed in the Andaman Islands. The tsunami caused minimal damage and no casualties, but led to mass evacuations along coastal areas."
+    },
+    {
+      "year": "2007",
+      "location": "Andaman Islands",
+      "description": "A September 12, 2007 earthquake near Sumatra generated small tsunami waves affecting the Andaman Islands. Wave heights reached approximately 0.4 meters. There were no casualties, but the event prompted evacuation of coastal communities as a precautionary measure."
+    },
+    {
+      "year": "1945",
+      "location": "Gujarat (then part of Bombay Presidency)",
+      "description": "On November 28, 1945, an 8.1 magnitude earthquake in the Makran Trench in the Arabian Sea generated a significant tsunami that affected western India, particularly the Kutch region in Gujarat. The tsunami reached heights of 11-15 meters in some coastal areas and hit approximately 3 hours after the earthquake. Around 4,000 people died in the combined earthquake-tsunami disaster, though exact numbers specifically from the tsunami are unclear. The tsunami caused extensive damage to ports, fishing vessels, and coastal villages along the Gujarat coast, with impacts recorded as far as Mumbai (then Bombay)."
+    },
+    {
+      "year": "1941",
+      "location": "Andaman Islands",
+      "description": "An 8.1 magnitude earthquake in the Andaman Sea on June 26, 1941, generated a tsunami that affected the Andaman Islands and parts of the eastern coast of India. The tsunami caused significant damage to Port Blair and other coastal settlements in the Andaman Islands. While comprehensive casualty figures are not available, reports indicate substantial damage to port facilities and coastal buildings. Wave heights of 1-3 meters were reported along parts of the eastern coast of mainland India."
+    },
+    {
+      "year": "1881",
+      "location": "Car Nicobar Islands",
+      "description": "On December 31, 1881, an earthquake near the Nicobar Islands generated a tsunami that severely affected the Andaman and Nicobar Islands and caused minor impacts along India's eastern coast. The tsunami completely inundated parts of Car Nicobar Island with waves up to 10 meters high. Colonial records indicate significant destruction of coastal settlements and some fatalities, though precise numbers are not available. This historical tsunami is significant as it affected approximately the same region as the 2004 tsunami."
+    }
+  ],
+  "earthquake": [
+    {
+      "year": "2023",
+      "location": "Delhi-NCR",
+      "description": "A series of moderate earthquakes (magnitudes 3.0-5.0) struck the Delhi-NCR region between February and November 2023. While no casualties occurred, the frequent seismic activity raised concerns about the region's preparedness for a potential major earthquake. The most significant was a 5.0 magnitude earthquake on October 3, 2023, with its epicenter in Nepal, that was strongly felt across Delhi-NCR. The seismic swarm highlighted Delhi's location in the seismically active Zone IV."
+    },
+    {
+      "year": "2021",
+      "location": "Assam",
+      "description": "A 6.4 magnitude earthquake struck Sonitpur district in Assam on April 28, 2021, followed by multiple aftershocks up to magnitude 4.7. At least 10 people were injured, and numerous buildings developed cracks across Sonitpur, Nagaon, and neighboring districts. The earthquake damaged several historical monuments including the Kaziranga National Orchid Park. Tremors were felt across Northeast India and as far as Bangladesh."
+    },
+    {
+      "year": "2019",
+      "location": "Arunachal Pradesh",
+      "description": "A 5.8 magnitude earthquake struck eastern Arunachal Pradesh on April 23, 2019, with its epicenter in Arunachal Pradesh's East Kameng district. While no casualties were reported, several buildings developed cracks in Itanagar and surrounding areas. The earthquake was felt across northeastern states and parts of Bhutan and Tibet."
+    },
+    {
+      "year": "2017",
+      "location": "Manipur",
+      "description": "A 5.7 magnitude earthquake struck Manipur on November 26, 2017, with its epicenter near the India-Myanmar border. Minor damage to buildings was reported in Imphal, but no casualties occurred. The earthquake was felt across northeastern India, parts of Bangladesh, and Myanmar."
+    },
+    {
+      "year": "2016",
+      "location": "Manipur",
+      "description": "A 6.7 magnitude earthquake struck Manipur on January 4, 2016, with its epicenter in Tamenglong district. At least 11 people died and 200 were injured. The earthquake damaged several buildings in Imphal, including the iconic Ima Keithel market. Damage extended to neighboring states of Assam, Nagaland, and Mizoram. The quake was also felt in Bangladesh, Bhutan, and Myanmar."
+    },
+    {
+      "year": "2015",
+      "location": "Nepal-Bihar Border",
+      "description": "The devastating 7.8 magnitude Nepal earthquake on April 25, 2015, and its major 7.3 magnitude aftershock on May 12 significantly impacted northern India, especially Bihar. In India, 78 people died, with Bihar accounting for 57 deaths. Over 400 people were injured, and more than 30,000 houses were damaged in Bihar, Uttar Pradesh, and West Bengal. The earthquake affected 30 districts in Bihar, with Sitamarhi, Madhubani, and East Champaran being the worst hit."
+    },
+    {
+      "year": "2015",
+      "location": "Sikkim and West Bengal",
+      "description": "A 5.1 magnitude earthquake struck the Sikkim-Nepal border region on November 18, 2015. While no casualties were reported in India, several buildings developed cracks in Gangtok and Darjeeling. The earthquake caused landslides in some parts of Sikkim, blocking rural roads. Tremors were felt across Sikkim, North Bengal, and parts of Nepal and Bhutan."
+    },
+    {
+      "year": "2012",
+      "location": "Sikkim-Nepal Border",
+      "description": "A 5.3 magnitude earthquake struck the Sikkim-Nepal border on November 10, 2012, causing minor damage in parts of Sikkim. No casualties were reported. The earthquake was a significant aftershock of the major 2011 Sikkim earthquake."
+    },
+    {
+      "year": "2011",
+      "location": "Sikkim",
+      "description": "A 6.9 magnitude earthquake struck Sikkim on September 18, 2011, with its epicenter near the Nepal-Sikkim border. In India, 75 people died, with Sikkim accounting for 60 deaths. Over 7,000 buildings were damaged or destroyed in Sikkim. Major landslides blocked roads, including National Highway 31A, hampering rescue operations. The earthquake also affected West Bengal, Bihar, Assam, Meghalaya, and parts of Nepal and Bhutan."
+    },
+    {
+      "year": "2009",
+      "location": "Andaman Islands",
+      "description": "A 7.5 magnitude earthquake struck near the Andaman Islands on August 10, 2009. Due to its offshore epicenter, no major damage or casualties were reported in the islands, though tsunami warnings were briefly issued. The earthquake was felt across the Andaman and Nicobar Islands and parts of mainland India and Southeast Asia."
+    },
+    {
+      "year": "2007",
+      "location": "Jammu and Kashmir",
+      "description": "A 5.6 magnitude earthquake struck the Kashmir region on October 8, 2007, exactly two years after the devastating 2005 Kashmir earthquake. In India, the earthquake affected parts of Jammu and Kashmir, causing minor damage but no reported casualties. The earthquake was a reminder of the region's high seismic vulnerability."
+    },
+    {
+      "year": "2005",
+      "location": "Jammu and Kashmir",
+      "description": "The 7.6 magnitude Kashmir earthquake on October 8, 2005, devastated parts of Pakistan-administered Kashmir and also severely impacted Indian-administered Kashmir. In India, over 1,300 people died, primarily in Uri, Tangdhar, and Poonch sectors. About 150,000 buildings were damaged or destroyed in Jammu and Kashmir. The earthquake damaged key infrastructure, including hospitals, schools, and roads, and triggered landslides that cut off remote villages for days."
+    },
+    {
+      "year": "2004",
+      "location": "Andaman and Nicobar Islands",
+      "description": "The catastrophic 9.1 magnitude earthquake off the coast of Sumatra on December 26, 2004, which triggered the Indian Ocean tsunami, also caused significant earthquake damage in the Andaman and Nicobar Islands. The islands experienced severe shaking for several minutes, with structural damage reported throughout the archipelago. While most casualties were from the subsequent tsunami, the earthquake itself destroyed critical infrastructure, including the port at Car Nicobar and buildings in Port Blair."
+    },
+    {
+      "year": "2001",
+      "location": "Gujarat (Bhuj)",
+      "description": "The catastrophic 7.7 magnitude Bhuj earthquake struck on January 26, 2001 (Republic Day) at 8:46 AM local time, with its epicenter near the town of Bhuj. The earthquake, lasting over 2 minutes, devastated Kachchh district and affected a 700 km radius including parts of Pakistan. Around 20,000 people died, 167,000 were injured, and nearly 400,000 homes were destroyed. Bhuj, Anjar, Bachau, and Rapar towns suffered 90% destruction. The earthquake damaged 5,000 healthcare facilities, 12,000 schools, and major infrastructure including dams, bridges, and power plants. Economic losses reached US$7.5 billion. The disaster led to major reforms in India's building codes and disaster management systems."
+    },
+    {
+      "year": "1999",
+      "location": "Chamoli, Uttarakhand",
+      "description": "A 6.8 magnitude earthquake struck the Chamoli district of Uttarakhand (then Uttar Pradesh) on March 29, 1999. The earthquake killed 103 people and injured over 1,000. It damaged or destroyed more than 50,000 houses across Chamoli, Rudraprayag, and Tehri Garhwal districts. Several landslides blocked roads in the mountainous region, hampering rescue operations. The earthquake revealed the vulnerability of traditional stone masonry buildings in the Himalayan region."
+    },
+    {
+      "year": "1997",
+      "location": "Jabalpur, Madhya Pradesh",
+      "description": "A 6.0 magnitude earthquake struck the Jabalpur region of Madhya Pradesh on May 22, 1997. The earthquake killed 38 people and injured more than 1,000. Around 8,000 buildings were damaged, primarily in Jabalpur city and surrounding villages. The earthquake was unusual as it occurred in the central Indian peninsula, generally considered a stable region. It prompted reassessment of seismic zoning in central India."
+    },
+    {
+      "year": "1993",
+      "location": "Maharashtra (Latur)",
+      "description": "The Latur earthquake, also known as the Killari earthquake, struck Maharashtra's Marathwada region on September 30, 1993, with a magnitude of 6.4. Despite its moderate magnitude, it was devastating due to its shallow focal depth (less than 10 km) and occurred in a region with no prior seismic activity and thus unprepared. Around 9,748 people died and 30,000 were injured. The earthquake destroyed 52 villages completely and partially damaged another 175 villages. Entire village populations were wiped out in Killari, Latur, and Osmanabad districts. Unreinforced stone masonry houses with heavy roofs contributed to the high death toll. The disaster prompted India to establish a national disaster management system and reassess seismic zoning across the country."
+    }
+  ],
+  "drought": [
+    {
+      "year": "2023",
+      "location": "Kerala and Karnataka",
+      "description": "Despite heavy rainfall and flooding in some parts, Kerala experienced severe drought conditions in districts like Palakkad, Thrissur, and Wayanad during pre-monsoon months of 2023. Drought affected over 1.5 million farmers in Karnataka, particularly in Kolar, Chikkaballapur, Tumakuru, and Chitradurga districts, with crop losses estimated at ₹8,000 crore. Both states declared drought in multiple districts, affecting drinking water supply and agricultural production."
+    },
+    {
+      "year": "2022-2023",
+      "location": "Uttar Pradesh and Bihar",
+      "description": "Prolonged drought conditions affected eastern Uttar Pradesh and Bihar through late 2022 and early 2023. Rainfall deficits of 30-50% in multiple districts led to severe agricultural impacts, with rice cultivation particularly affected. Over 20 million farmers faced crop losses, and many districts faced drinking water shortages. The drought coincided with heat waves that exacerbated the impact on rural communities and agricultural productivity."
+    },
+    {
+      "year": "2021-2022",
+      "location": "Gujarat, Rajasthan, and Madhya Pradesh",
+      "description": "A severe drought affected western and central India from late 2021 through mid-2022. Gujarat declared drought in 51 talukas across 9 districts, with crop losses exceeding ₹7,000 crore. Rajasthan's Barmer, Jaisalmer, and Jodhpur districts faced acute water scarcity with rainfall deficits of over 60%. In Madhya Pradesh, 25 districts experienced moderate to severe drought conditions, affecting over 12 million farmers. Thousands of villages required emergency water supplies through tankers."
+    },
+    {
+      "year": "2019-2020",
+      "location": "Maharashtra and Karnataka",
+      "description": "One of the most severe droughts in recent decades hit Maharashtra in 2019-2020, with 26 of 36 districts affected. Nearly 30,000 villages faced acute water scarcity, forcing mass migration from rural areas to cities. Marathwada region was worst affected, with major dams at less than 15% capacity. In Karnataka, 156 talukas in 30 districts were drought-affected. Agricultural production declined by 45% in affected regions, and over 6,000 farmer suicides were linked to crop failures and subsequent financial distress. The government deployed over 6,000 water tankers to supply drinking water to affected areas."
+    },
+    {
+      "year": "2018",
+      "location": "Andhra Pradesh and Tamil Nadu",
+      "description": "In 2018, Andhra Pradesh declared drought in 347 mandals across 9 districts, affecting over 16 million people. The state received 27% less rainfall than average, leading to crop losses estimated at ₹8,000 crore. Tamil Nadu declared 24 districts as drought-affected following a 62% deficit in northeast monsoon rainfall. The Chennai water crisis peaked during this period, with the city's four main reservoirs drying up completely by June 2019. Over 12 million farmers across both states were affected by crop failures."
+    },
+    {
+      "year": "2016-2018",
+      "location": "Tamil Nadu",
+      "description": "Tamil Nadu experienced its worst drought in 140 years during 2016-2018. All 32 districts were declared drought-affected in 2017. The state received 62% less rainfall during the northeast monsoon of 2016. Chennai's water supply was severely affected as the four major reservoirs nearly dried up. Agricultural production declined by 40%, affecting the livelihoods of 21 million farmers. The drought led to widespread farmer protests and policy changes in water management."
+    },
+    {
+      "year": "2015-2016",
+      "location": "Maharashtra, Karnataka, Andhra Pradesh, Telangana",
+      "description": "The devastating drought of 2015-2016 affected more than 330 million people across 10 states, being one of India's worst in decades. Maharashtra was most severely affected, with 15,747 villages (out of 40,559) declared drought-stricken. Marathwada region faced its worst water scarcity in 40 years, with many reservoirs at 0% capacity. Karnataka declared 136 talukas drought-affected, while Telangana declared drought in 231 mandals. Rainfall deficits reached 40-50% in many regions, and agricultural production declined by 35-40%. The drought triggered a major water crisis in urban areas, including Latur, where water was delivered by special 'water trains.' Economic losses exceeded ₹1 lakh crore, and thousands of farmers migrated from rural areas as agricultural livelihoods collapsed."
+    },
+    {
+      "year": "2014",
+      "location": "Uttar Pradesh, Haryana, Maharashtra",
+      "description": "A significant drought in 2014 affected northern and western India following a deficient monsoon with 12% below-normal rainfall nationally. In Uttar Pradesh, 44 districts faced moderate to severe drought conditions, affecting over 25 million farmers. Haryana declared drought in 9 districts. Maharashtra's Marathwada and Vidarbha regions experienced severe water shortages. Agricultural production declined by 20-25% in affected regions, with economic losses estimated at ₹60,000 crore."
+    },
+    {
+      "year": "2012-2013",
+      "location": "Maharashtra, Karnataka, Gujarat",
+      "description": "Maharashtra experienced one of its worst droughts in decades during 2012-2013, with 16 districts severely affected. The drought impacted 11,801 villages, primarily in Marathwada and western Maharashtra. Over 15 million livestock were relocated to cattle camps for water and fodder. Karnataka declared drought in 142 talukas across 23 districts. Gujarat's Saurashtra and Kutch regions faced severe water scarcity. A massive relief effort included 2,500 water tankers and special trains to transport water to Latur and other critically affected areas. Agricultural production declined by 30%, causing economic losses of approximately ₹20,000 crore."
+    },
+    {
+      "year": "2009",
+      "location": "Nationwide (particularly northern India)",
+      "description": "The 2009 all-India drought was one of the most widespread in recent decades, triggered by the weakest monsoon since 1972, with a 23% rainfall deficit nationwide. The government declared 272 districts (out of 640) drought-affected across the country. Rice production fell by 10 million tonnes, and other crop yields declined by 20-40%. Food prices rose by 19%, creating widespread food insecurity. Northern states were most severely affected, with Punjab experiencing a 36% rainfall deficit. The drought required a massive relief operation costing over ₹15,000 crore."
+    },
+    {
+      "year": "2002-2003",
+      "location": "Rajasthan, Gujarat, Andhra Pradesh, Tamil Nadu",
+      "description": "The 2002-2003 drought affected 56% of India's land area and impacted approximately 300 million people across 18 states. Rainfall deficits reached 19% nationwide, with some regions experiencing 60-70% below normal precipitation. Rajasthan was most severely affected, with 41,000 villages across 31 districts suffering acute water scarcity. In Gujarat, all 25 districts were drought-affected, with 9 districts experiencing severe conditions. Andhra Pradesh declared 1,065 mandals drought-hit. Agricultural output dropped by 3.1%, with food grain production declining by 29 million tonnes. The government provided ₹20,000 crore (US$2.5 billion) in relief. The drought depleted groundwater levels significantly, with some regions experiencing a 10-15 meter decline."
+    },
+    {
+      "year": "2000-2001",
+      "location": "Gujarat, Rajasthan, Madhya Pradesh, Andhra Pradesh",
+      "description": "A severe drought in 2000-2001 affected western and central India. Gujarat experienced its worst drought in 100 years, with all districts affected and water tables declining by 3-5 meters across the state. The drought destroyed crops on 4.4 million hectares of land. In Rajasthan, 26 out of 32 districts were affected, with 23,406 villages facing acute water shortages. Madhya Pradesh declared 35 districts drought-affected. The drought led to widespread migration, particularly from rural Gujarat and Rajasthan. Over 50 million cattle were affected by fodder shortages, and thousands of livestock deaths were reported."
+    }
+  ]
+}

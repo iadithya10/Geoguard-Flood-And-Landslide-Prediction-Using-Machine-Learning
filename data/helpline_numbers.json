@@ -1,0 +1,202 @@
+{
+  "National": {
+    "Emergency Services": "112",
+    "National Disaster Response Force (NDRF)": "011-24363260",
+    "National Emergency Response Centre": "1070",
+    "Ambulance": "108",
+    "Fire Services": "101",
+    "Police": "100",
+    "Disaster Management Services": "108",
+    "Health Helpline": "104",
+    "Women Helpline": "1091",
+    "Child Helpline": "1098",
+    "Indian Meteorological Department": "011-24631913",
+    "National Crisis Management Committee": "011-23092923",
+    "Railway Accident Emergency Service": "1072",
+    "Road Accident Emergency Service": "1073",
+    "Earthquake Helpline": "011-24363260",
+    "Flood Helpline": "1078",
+    "Landslide Helpline": "1070",
+    "Tsunami Warning Helpline": "1096"
+  },
+  "Andhra Pradesh": {
+    "State Emergency Operation Centre": "0863-2377201",
+    "Disaster Management": "1070",
+    "District Emergency": "1077"
+  },
+  "Arunachal Pradesh": {
+    "State Emergency Operation Centre": "0360-2247553",
+    "Disaster Management": "1070",
+    "District Emergency": "1077"
+  },
+  "Assam": {
+    "State Emergency Operation Centre": "0361-2237221",
+    "Disaster Management": "1070",
+    "District Emergency": "1077"
+  },
+  "Bihar": {
+    "State Emergency Operation Centre": "0612-2294204",
+    "Disaster Management": "1070",
+    "District Emergency": "1077"
+  },
+  "Chhattisgarh": {
+    "State Emergency Operation Centre": "0771-2223471",
+    "Disaster Management": "1070",
+    "District Emergency": "1077"
+  },
+  "Goa": {
+    "State Emergency Operation Centre": "0832-2419550",
+    "Disaster Management": "1070",
+    "District Emergency": "1077"
+  },
+  "Gujarat": {
+    "State Emergency Operation Centre": "079-23251900",
+    "Disaster Management": "1070",
+    "District Emergency": "1077"
+  },
+  "Haryana": {
+    "State Emergency Operation Centre": "0172-2711485",
+    "Disaster Management": "1070",
+    "District Emergency": "1077"
+  },
+  "Himachal Pradesh": {
+    "State Emergency Operation Centre": "0177-2626211",
+    "Disaster Management": "1070",
+    "District Emergency": "1077"
+  },
+  "Jharkhand": {
+    "State Emergency Operation Centre": "0651-2490040",
+    "Disaster Management": "1070",
+    "District Emergency": "1077"
+  },
+  "Karnataka": {
+    "State Emergency Operation Centre": "080-22340676",
+    "Disaster Management": "1070",
+    "District Emergency": "1077"
+  },
+  "Kerala": {
+    "State Emergency Operation Centre": "0471-2364424",
+    "Disaster Management": "1070",
+    "District Emergency": "1077"
+  },
+  "Madhya Pradesh": {
+    "State Emergency Operation Centre": "0755-2556422",
+    "Disaster Management": "1070",
+    "District Emergency": "1077"
+  },
+  "Maharashtra": {
+    "State Emergency Operation Centre": "022-22027990",
+    "Disaster Management": "1070",
+    "District Emergency": "1077"
+  },
+  "Manipur": {
+    "State Emergency Operation Centre": "0385-2450214",
+    "Disaster Management": "1070",
+    "District Emergency": "1077"
+  },
+  "Meghalaya": {
+    "State Emergency Operation Centre": "0364-2224236",
+    "Disaster Management": "1070",
+    "District Emergency": "1077"
+  },
+  "Mizoram": {
+    "State Emergency Operation Centre": "0389-2342520",
+    "Disaster Management": "1070",
+    "District Emergency": "1077"
+  },
+  "Nagaland": {
+    "State Emergency Operation Centre": "0370-2291994",
+    "Disaster Management": "1070",
+    "District Emergency": "1077"
+  },
+  "Odisha": {
+    "State Emergency Operation Centre": "0674-2534177",
+    "Disaster Management": "1070",
+    "District Emergency": "1077"
+  },
+  "Punjab": {
+    "State Emergency Operation Centre": "0172-2749468",
+    "Disaster Management": "1070",
+    "District Emergency": "1077"
+  },
+  "Rajasthan": {
+    "State Emergency Operation Centre": "0141-2227084",
+    "Disaster Management": "1070",
+    "District Emergency": "1077"
+  },
+  "Sikkim": {
+    "State Emergency Operation Centre": "03592-202932",
+    "Disaster Management": "1070",
+    "District Emergency": "1077"
+  },
+  "Tamil Nadu": {
+    "State Emergency Operation Centre": "044-28593990",
+    "Disaster Management": "1070",
+    "District Emergency": "1077"
+  },
+  "Telangana": {
+    "State Emergency Operation Centre": "040-23451043",
+    "Disaster Management": "1070",
+    "District Emergency": "1077"
+  },
+  "Tripura": {
+    "State Emergency Operation Centre": "0381-2416045",
+    "Disaster Management": "1070",
+    "District Emergency": "1077"
+  },
+  "Uttar Pradesh": {
+    "State Emergency Operation Centre": "0522-2237515",
+    "Disaster Management": "1070",
+    "District Emergency": "1077"
+  },
+  "Uttarakhand": {
+    "State Emergency Operation Centre": "0135-2710334",
+    "Disaster Management": "1070",
+    "District Emergency": "1077"
+  },
+  "West Bengal": {
+    "State Emergency Operation Centre": "033-22143526",
+    "Disaster Management": "1070",
+    "District Emergency": "1077"
+  },
+  "Andaman & Nicobar Islands": {
+    "State Emergency Operation Centre": "03192-242940",
+    "Disaster Management": "1070",
+    "District Emergency": "1077"
+  },
+  "Chandigarh": {
+    "State Emergency Operation Centre": "0172-2749194",
+    "Disaster Management": "1070",
+    "District Emergency": "1077"
+  },
+  "Dadra & Nagar Haveli and Daman & Diu": {
+    "State Emergency Operation Centre": "0260-2230830",
+    "Disaster Management": "1070",
+    "District Emergency": "1077"
+  },
+  "Delhi": {
+    "State Emergency Operation Centre": "011-22512438",
+    "Disaster Management": "1070",
+    "District Emergency": "1077"
+  },
+  "Jammu & Kashmir": {
+    "State Emergency Operation Centre": "0194-2472580",
+    "Disaster Management": "1070",
+    "District Emergency": "1077"
+  },
+  "Ladakh": {
+    "State Emergency Operation Centre": "01982-259409",
+    "Disaster Management": "1070",
+    "District Emergency": "1077"
+  },
+  "Lakshadweep": {
+    "State Emergency Operation Centre": "04896-262140",
+    "Disaster Management": "1070",
+    "District Emergency": "1077"
+  },
+  "Puducherry": {
+    "State Emergency Operation Centre": "0413-2253407",
+    "Disaster Management": "1070",
+    "District Emergency": "1077"
+  }
+}
