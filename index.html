@@ -1,0 +1,191 @@
+{% extends 'layout.html' %}
+
+{% block title %} - Home{% endblock %}
+
+{% block content %}
+<div class="container">
+    <!-- Hero Section -->
+    <div class="p-5 mb-4 bg-secondary rounded-3">
+        <div class="container-fluid py-5">
+            <h1 class="display-5 fw-bold"></h1>
+            <p class="col-md-8 fs-4">Learn how to stay safe during natural disasters like floods, landslides, earthquakes, and tsunamis. Knowledge saves lives!</p>
+            <div class="d-flex gap-3 flex-wrap">
+                <a href="{{ url_for('emergency') }}" class="btn btn-primary btn-lg">
+                    <i class="fas fa-phone-alt"></i> Emergency Contacts
+                </a>
+                <a href="{{ url_for('videos') }}" class="btn btn-info btn-lg">
+                    <i class="fas fa-video"></i> Educational Videos
+                </a>
+                <a href="{{ url_for('quiz') }}" class="btn btn-warning btn-lg">
+                    <i class="fas fa-question-circle"></i> Test Your Knowledge
+                </a>
+                <a href="{{ url_for('game') }}" class="btn btn-success btn-lg">
+                    <i class="fas fa-gamepad"></i> Disaster Prep Game
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Info Cards Section -->
+    <div class="row mb-5 g-4">
+        <div class="col-md-3">
+            <div class="card h-100">
+                <div class="card-body text-center">
+                    <div class="mb-3">
+                        <i class="fas fa-water fa-4x text-primary"></i>
+                    </div>
+                    <h5 class="card-title">Flood Awareness</h5>
+                    <p class="card-text">Learn about flood warnings, evacuation plans, and how to protect your family and property.</p>
+                    <a href="{{ url_for('videos') }}#flood" class="btn btn-outline-primary">Learn More</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card h-100">
+                <div class="card-body text-center">
+                    <div class="mb-3">
+                        <i class="fas fa-mountain fa-4x text-warning"></i>
+                    </div>
+                    <h5 class="card-title">Landslide Safety</h5>
+                    <p class="card-text">Understand the warning signs and safety measures for landslide-prone areas.</p>
+                    <a href="{{ url_for('videos') }}#landslide" class="btn btn-outline-warning">Learn More</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card h-100">
+                <div class="card-body text-center">
+                    <div class="mb-3">
+                        <i class="fas fa-house-damage fa-4x text-danger"></i>
+                    </div>
+                    <h5 class="card-title">Earthquake Preparedness</h5>
+                    <p class="card-text">Essential steps to prepare for, survive during, and recover after an earthquake.</p>
+                    <a href="{{ url_for('videos') }}#earthquake" class="btn btn-outline-danger">Learn More</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card h-100">
+                <div class="card-body text-center">
+                    <div class="mb-3">
+                        <i class="fas fa-water fa-4x text-info"></i>
+                    </div>
+                    <h5 class="card-title">Tsunami Information</h5>
+                    <p class="card-text">Learn about tsunami warnings, evacuation routes, and life-saving practices.</p>
+                    <a href="{{ url_for('videos') }}#tsunami" class="btn btn-outline-info">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Emergency Prep Section -->
+    <div class="row mb-5">
+        <div class="col-lg-6">
+            <h3 class="border-bottom pb-2 mb-4">Emergency Preparedness Kit</h3>
+            <div class="d-flex flex-column gap-3">
+                <div class="d-flex align-items-center">
+                    <div class="me-3">
+                        <i class="fas fa-tint fa-2x text-primary"></i>
+                    </div>
+                    <div>
+                        <h5 class="mb-1">Water</h5>
+                        <p class="mb-0">One gallon per person per day for at least three days</p>
+                    </div>
+                </div>
+                
+                <div class="d-flex align-items-center">
+                    <div class="me-3">
+                        <i class="fas fa-apple-alt fa-2x text-success"></i>
+                    </div>
+                    <div>
+                        <h5 class="mb-1">Food</h5>
+                        <p class="mb-0">Non-perishable food for at least three days</p>
+                    </div>
+                </div>
+                
+                <div class="d-flex align-items-center">
+                    <div class="me-3">
+                        <i class="fas fa-first-aid fa-2x text-danger"></i>
+                    </div>
+                    <div>
+                        <h5 class="mb-1">First Aid Kit</h5>
+                        <p class="mb-0">Including medicines and medical supplies</p>
+                    </div>
+                </div>
+                
+                <div class="d-flex align-items-center">
+                    <div class="me-3">
+                        <i class="fas fa-battery-full fa-2x text-warning"></i>
+                    </div>
+                    <div>
+                        <h5 class="mb-1">Flashlight & Batteries</h5>
+                        <p class="mb-0">With extra batteries for emergency lighting</p>
+                    </div>
+                </div>
+                
+                <div class="d-flex align-items-center">
+                    <div class="me-3">
+                        <i class="fas fa-broadcast-tower fa-2x text-info"></i>
+                    </div>
+                    <div>
+                        <h5 class="mb-1">Radio</h5>
+                        <p class="mb-0">Battery-powered or hand-crank radio for emergency information</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-6">
+            <h3 class="border-bottom pb-2 mb-4">Disaster Safety Tips</h3>
+            <ul class="list-group">
+                <li class="list-group-item d-flex align-items-center">
+                    <i class="fas fa-check-circle text-success me-2"></i>
+                    Know your area's evacuation routes and shelter locations
+                </li>
+                <li class="list-group-item d-flex align-items-center">
+                    <i class="fas fa-check-circle text-success me-2"></i>
+                    Have a family communication plan and meeting point
+                </li>
+                <li class="list-group-item d-flex align-items-center">
+                    <i class="fas fa-check-circle text-success me-2"></i>
+                    Keep important documents in waterproof containers
+                </li>
+                <li class="list-group-item d-flex align-items-center">
+                    <i class="fas fa-check-circle text-success me-2"></i>
+                    Sign up for emergency alerts and warnings
+                </li>
+                <li class="list-group-item d-flex align-items-center">
+                    <i class="fas fa-check-circle text-success me-2"></i>
+                    Learn basic first aid and CPR
+                </li>
+                <li class="list-group-item d-flex align-items-center">
+                    <i class="fas fa-check-circle text-success me-2"></i>
+                    Locate and learn how to shut off utilities
+                </li>
+                <li class="list-group-item d-flex align-items-center">
+                    <i class="fas fa-check-circle text-success me-2"></i>
+                    Have emergency contact information readily available
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="p-5 my-5 bg-danger text-white rounded-3">
+        <div class="row align-items-center">
+            <div class="col-md-8">
+                <h2>Are You Prepared for a Disaster?</h2>
+                <p class="fs-5">Take our quiz to test your knowledge and learn how to better prepare yourself and your loved ones for natural disasters.</p>
+            </div>
+            <div class="col-md-4 text-md-end">
+                <a href="{{ url_for('quiz') }}" class="btn btn-light btn-lg px-4">
+                    <i class="fas fa-question-circle me-2"></i> Take the Quiz
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

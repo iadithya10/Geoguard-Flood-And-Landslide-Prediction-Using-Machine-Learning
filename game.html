@@ -1,0 +1,289 @@
+{% extends 'layout.html' %}
+
+{% block title %} - Game {% endblock %}
+
+{% block content %}
+<div class="container">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light mb-4 shadow-sm border-bottom">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{{ url_for('index') }}">
+                <i class="fas fa-shield-alt me-2 text-primary"></i>Disaster Awareness Portal
+            </a>
+            <button class="navbar-toggler" type="button" id="mobile-menu-toggle" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="d-flex flex-column align-items-end ms-auto">
+                <ul class="navbar-nav flex-row">
+                    <li class="nav-item"><a class="nav-link text-purple" href="{{ url_for('home') }}"><i class="fas fa-home"></i> HOME</a></li>
+                    <li class="nav-item"><a class="nav-link text-purple" href="chatbot.html"><i class="fa fa-comments"></i> CHATBOT</a></li>
+                    <li class="nav-item"><a class="nav-link text-purple" href="predicts.html"><i class="fa fa-eye"></i> PREDICT</a></li>
+                    <li class="nav-item"><a class="nav-link text-purple" href="disaster_awareness.html"><i class="fa fa-exclamation-triangle"></i> AWARENESS</a></li>
+                    <li class="nav-item"><a class="nav-link text-purple" href="accuracy.html"><i class="fa fa-bullseye"></i> ACCURACY</a></li>
+                </ul>
+                <ul class="navbar-nav flox-row mt-2">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('quiz') }}">
+                            <i class="fas fa-question-circle me-1 text-primary"></i> Quiz
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="{{ url_for('game') }}">
+                            <i class="fas fa-gamepad me-1 text-success"></i> Game
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('videos') }}">
+                            <i class="fas fa-video me-1 text-info"></i> Videos
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('emergency') }}">
+                            <i class="fas fa-phone-alt me-1 text-danger"></i> Emergency
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <h1 class="mb-4 text-center">Disaster Hero</h1>
+    <p class="lead text-center mb-5">
+        Play this educational game to learn how to prepare for and respond to various natural disasters. 
+        Complete challenges and earn badges as you become a Disaster Hero!
+    </p>
+
+    <!-- Game Container -->
+    <div class="row">
+        <div class="col-lg-9">
+            <div class="card mb-4">
+                <div class="card-header bg-success text-white d-flex justify-content-between align-items-center">
+                    <h3 class="mb-0">Disaster Hero Game</h3>
+                    <div>
+                        <span class="badge bg-warning text-dark me-2">Score: <span id="game-score">0</span></span>
+                        <span class="badge bg-info">Level: <span id="game-level">1</span></span>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <!-- Game canvas -->
+                    <div id="game-container" class="bg-light rounded position-relative mb-3 border" style="height: 450px;">
+                        <!-- Game start screen -->
+                        <div id="game-start-screen" class="position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center align-items-center text-center p-4">
+                            <h2 class="text-primary mb-3">Welcome to Disaster Hero!</h2>
+                            <p class="text-dark mb-4">Your mission is to prepare for different natural disasters by selecting the right safety items before time runs out.</p>
+                            <button id="start-game-btn" class="btn btn-success btn-lg">
+                                <i class="fas fa-play me-2"></i> Start Game
+                            </button>
+                        </div>
+                        
+                        <!-- Game play area - will be populated by JavaScript -->
+                        <div id="game-play-area" class="d-none position-absolute top-0 start-0 w-100 h-100">
+                            <!-- Game elements will be inserted here by JavaScript -->
+                        </div>
+                        
+                        <!-- Game over screen -->
+                        <div id="game-over-screen" class="position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center align-items-center text-center p-4 d-none">
+                            <h2 class="text-danger mb-3">Game Over</h2>
+                            <p class="text-dark mb-2">Your final score: <span id="final-score">0</span></p>
+                            <p class="text-dark mb-4">You reached level: <span id="final-level">1</span></p>
+                            <div class="d-flex gap-3">
+                                <button id="play-again-btn" class="btn btn-success">
+                                    <i class="fas fa-redo me-2"></i> Play Again
+                                </button>
+                                <a href="{{ url_for('quiz') }}" class="btn btn-primary">
+                                    <i class="fas fa-question-circle me-2"></i> Try the Quiz
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Game controls -->
+                    <div id="game-controls" class="d-none">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div id="item-selection" class="d-flex flex-wrap gap-2 mb-3">
+                                    <!-- Item buttons will be inserted here by JavaScript -->
+                                </div>
+                            </div>
+                            <div class="col-md-4 text-end">
+                                <button id="disaster-info-btn" class="btn btn-info mb-2">
+                                    <i class="fas fa-info-circle me-2"></i> Disaster Info
+                                </button>
+                                <button id="pause-game-btn" class="btn btn-secondary">
+                                    <i class="fas fa-pause me-2"></i> Pause
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Disaster info modal -->
+            <div class="modal fade" id="disasterInfoModal" tabindex="-1" aria-labelledby="disasterInfoModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header bg-info text-white">
+                            <h5 class="modal-title" id="disasterInfoModalLabel">Disaster Information</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body" id="disaster-info-content">
+                            <!-- Disaster info content will be inserted here by JavaScript -->
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-3">
+            <!-- Badges and achievements -->
+            <div class="card mb-4">
+                <div class="card-header bg-warning">
+                    <h4 class="mb-0">Your Badges</h4>
+                </div>
+                <div class="card-body">
+                    <div id="badges-container" class="d-flex flex-column gap-3">
+                        <div class="badge-item d-flex align-items-center">
+                            <div class="me-3 text-center" style="width: 50px;">
+                                <i class="fas fa-shield-alt fa-2x text-secondary"></i>
+                            </div>
+                            <div>
+                                <h6 class="mb-0">Flood Protector</h6>
+                                <small class="text-muted">Complete flood challenge</small>
+                            </div>
+                        </div>
+                        
+                        <div class="badge-item d-flex align-items-center">
+                            <div class="me-3 text-center" style="width: 50px;">
+                                <i class="fas fa-mountain fa-2x text-secondary"></i>
+                            </div>
+                            <div>
+                                <h6 class="mb-0">Landslide Expert</h6>
+                                <small class="text-muted">Complete landslide challenge</small>
+                            </div>
+                        </div>
+                        
+                        <div class="badge-item d-flex align-items-center">
+                            <div class="me-3 text-center" style="width: 50px;">
+                                <i class="fas fa-house-damage fa-2x text-secondary"></i>
+                            </div>
+                            <div>
+                                <h6 class="mb-0">Earthquake Survivor</h6>
+                                <small class="text-muted">Complete earthquake challenge</small>
+                            </div>
+                        </div>
+                        
+                        <div class="badge-item d-flex align-items-center">
+                            <div class="me-3 text-center" style="width: 50px;">
+                                <i class="fas fa-water fa-2x text-secondary"></i>
+                            </div>
+                            <div>
+                                <h6 class="mb-0">Tsunami Ready</h6>
+                                <small class="text-muted">Complete tsunami challenge</small>
+                            </div>
+                        </div>
+                        
+                        <div class="badge-item d-flex align-items-center">
+                            <div class="me-3 text-center" style="width: 50px;">
+                                <i class="fas fa-award fa-2x text-secondary"></i>
+                            </div>
+                            <div>
+                                <h6 class="mb-0">Disaster Hero</h6>
+                                <small class="text-muted">Complete all challenges</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Leaderboard -->
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    <h4 class="mb-0">High Scores</h4>
+                </div>
+                <div class="card-body">
+                    <div id="leaderboard-container">
+                        <div class="leaderboard-item d-flex justify-content-between mb-2">
+                            <span>Player 1</span>
+                            <span class="badge bg-success">2500</span>
+                        </div>
+                        <div class="leaderboard-item d-flex justify-content-between mb-2">
+                            <span>Player 2</span>
+                            <span class="badge bg-success">2100</span>
+                        </div>
+                        <div class="leaderboard-item d-flex justify-content-between mb-2">
+                            <span>Player 3</span>
+                            <span class="badge bg-success">1800</span>
+                        </div>
+                        <div class="leaderboard-item d-flex justify-content-between mb-2">
+                            <span>You</span>
+                            <span class="badge bg-primary">0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Game Guide -->
+    <div class="card mt-4">
+        <div class="card-header bg-info text-white">
+            <h3 class="mb-0">How to Play</h3>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Game Objective</h4>
+                    <p>Your mission is to prepare for different natural disasters by selecting the correct safety items within the time limit.</p>
+                    <h5 class="mt-4">Game Challenges</h5>
+                    <ul class="list-group mb-4">
+                        <li class="list-group-item">
+                            <strong>Flood Preparation</strong><br>
+                            Gather items to prepare for a flood
+                        </li>
+                        <li class="list-group-item">
+                            <strong>Earthquake Protection</strong><br>
+                            Secure areas around the home to prevent earthquake damage
+                        </li>
+                        <li class="list-group-item">
+                            <strong>Hurricane Safety</strong><br>
+                            Prepare for an approaching hurricane
+                        </li>
+                        <li class="list-group-item">
+                            <strong>Tsunami Evacuation</strong><br>
+                            Select items for tsunami evacuation
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <h4>Controls</h4>
+                    <ul class="list-group mb-4">
+                        <li class="list-group-item">
+                            <i class="fas fa-mouse-pointer me-2"></i> <strong>Click</strong> to select items (choose 4)
+                        </li>
+                        <li class="list-group-item">
+                            <i class="fas fa-info-circle me-2"></i> <strong>Disaster Info</strong> button provides hints
+                        </li>
+                        <li class="list-group-item">
+                            <i class="fas fa-pause me-2"></i> <strong>Pause</strong> button pauses the game
+                        </li>
+                    </ul>
+                    <h5>Scoring</h5>
+                    <ul class="list-group">
+                        <li class="list-group-item">+25 points for each correct item selected</li>
+                        <li class="list-group-item">Earn badges by completing each disaster challenge</li>
+                        <li class="list-group-item">You have 60 seconds per challenge</li>
+                        <li class="list-group-item">3 lives to complete all challenges</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/game.js') }}"></script>
+{% endblock %}

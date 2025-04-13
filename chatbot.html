@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geoguard - Chatbot</title>
+    <!-- Bootstrap CSS (Replit Theme) -->
+    <link rel="stylesheet" href="https://cdn.replit.com/agent/bootstrap-agent-dark-theme.min.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style3.css') }}">
+</head>
+<body>
+    <!-- Header -->
+    <!-- Header -->
+    <header class="disaster-header py-3">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <!-- Left Side: Title + Description -->
+                <div>
+                    <h1 class="mb-0">
+                        <i class="fas fa-robot me-2 text-danger"></i> Geoguard Chatbot
+                    </h1>
+                    <p class="mb-0 text-muted">Your guide to disaster preparation, prevention, and recovery in India</p>
+                </div>
+    
+                <!-- Right Side: Navigation -->
+                <nav class="main-nav d-none d-lg-block">
+                    <ul class="nav">
+                        <li class="nav-item"><a class="nav-link" href="home.html"><i class="fa fa-home"></i> HOME</a></li>
+                        <li class="nav-item"><a class="nav-link" href="chatbot.html"><i class="fa fa-comments"></i> CHATBOT</a></li>
+                        <li class="nav-item"><a class="nav-link" href="predicts.html"><i class="fa fa-eye"></i> PREDICT</a></li>
+                        <li class="nav-item"><a class="nav-link" href="disaster_awareness.html"><i class="fa fa-exclamation-triangle"></i> AWARENESS</a></li>
+                        <li class="nav-item"><a class="nav-link" href="accuracy.html"><i class="fa fa-bullseye"></i> ACCURACY</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    <!-- Main Content -->
+    <main class="py-4">
+        <div class="container">
+            <div class="row">
+                <!-- Chat Interface -->
+                <div class="col-md-8">
+                    <div class="card chat-container">
+                        <div class="card-header">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-comment-dots me-2 text-primary"></i>
+                                <h5 class="mb-0">Chat with Disaster Bot</h5>
+                            </div>
+                        </div>
+                        <div class="chat-messages" id="chat-messages">
+                            <!-- Messages will be added here by JavaScript -->
+                            
+                            <!-- Typing indicator -->
+                            <div class="typing-indicator" id="typing-indicator">
+                                <div class="message-content bg-secondary rounded p-2">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chat-input">
+                            <form id="chat-form">
+                                <div class="input-group">
+                                    <input type="text" id="user-input" class="form-control" placeholder="Type your question about disasters..." autocomplete="off">
+                                    <button type="submit" class="btn btn-primary">
+                                        <i class="fas fa-paper-plane"></i>
+                                    </button>
+                                </div>
+                            </form>
+                            <div class="language-selector mt-2">
+                                <label for="language-selector" class="form-label me-2 mb-0 text-secondary">
+                                    <i class="fas fa-language me-1"></i>Response Language:
+                                </label>
+                                <select id="language-selector" class="form-select form-select-sm">
+                                    <option value="en">English</option>
+                                    <option value="hi">हिन्दी (Hindi)</option>
+                                    <option value="ta">தமிழ் (Tamil)</option>
+                                    <option value="te">తెలుగు (Telugu)</option>
+                                    <option value="bn">বাংলা (Bengali)</option>
+                                    <option value="mr">मराठी (Marathi)</option>
+                                    <option value="gu">ગુજરાતી (Gujarati)</option>
+                                    <option value="kn">ಕನ್ನಡ (Kannada)</option>
+                                    <option value="ml">മലയാളം (Malayalam)</option>
+                                    <option value="pa">ਪੰਜਾਬੀ (Punjabi)</option>
+                                    <option value="ur">اردو (Urdu)</option>
+                                    <option value="or">ଓଡ଼ିଆ (Odia)</option>
+                                    <option value="as">অসমীয়া (Assamese)</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+                
+                <!-- Sidebar with Additional Information -->
+                <div class="col-md-4 mt-4 mt-md-0">
+                    <!-- Emergency Helplines Box -->
+                    <div class="card mb-4">
+                        <div class="card-header bg-danger text-white">
+                            <i class="fas fa-phone-alt me-2"></i> Emergency Helplines
+                        </div>
+                        <div class="card-body">
+                            <div id="emergency-helplines">
+                                <!-- Will be populated by JavaScript -->
+                                <div class="d-flex justify-content-center">
+                                    <div class="spinner-border text-primary" role="status">
+                                        <span class="visually-hidden">Loading...</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Disaster Preparedness Tips -->
+                    <div class="card mb-4">
+                        <div class="card-header bg-info text-white">
+                            <i class="fas fa-info-circle me-2"></i> Disaster Preparedness
+                        </div>
+                        <div class="card-body">
+                            <h6>Essential Items for Emergency Kit:</h6>
+                            <ul>
+                                <li>Water (1 gallon per person per day)</li>
+                                <li>Non-perishable food</li>
+                                <li>First aid supplies</li>
+                                <li>Flashlight and extra batteries</li>
+                                <li>Important documents in waterproof container</li>
+                                <li>Cash and identification cards</li>
+                                <li>Mobile phone with chargers</li>
+                            </ul>
+                            <button class="btn btn-sm btn-outline-info quick-response" data-message="Tell me more about emergency preparedness kits">
+                                Learn More
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Disaster Alert Information -->
+                    <div class="card">
+                        <div class="card-header bg-warning text-dark">
+                            <i class="fas fa-exclamation-triangle me-2"></i> Disaster Alerts
+                        </div>
+                        <div class="card-body">
+                            <p>Stay informed about potential disasters through:</p>
+                            <ul>
+                                <li>India Meteorological Department (IMD)</li>
+                                <li>National Disaster Management Authority (NDMA)</li>
+                                <li>Local emergency broadcasts</li>
+                                <li>Weather apps with alert features</li>
+                            </ul>
+                            <button class="btn btn-sm btn-outline-warning quick-response" data-message="How to receive disaster alerts in India?">
+                                Alert Systems
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-center text-white-50 py-3 mt-4">
+        <div class="container">
+            <p class="mb-0">© 2025 Geoguard Flood and Landslide Prediction Chatbot | Developed for disaster preparedness and recovery in India</p>
+            <small>This chatbot provides informational guidance only. In case of an actual emergency, please contact local authorities.</small>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='js/chat.js') }}"></script>
+</body>
+</html>

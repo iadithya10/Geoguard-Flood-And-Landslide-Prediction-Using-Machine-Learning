@@ -1,0 +1,156 @@
+{% extends 'layout.html' %}
+
+{% block title %} - Quiz{% endblock %}
+
+{% block content %}
+<div class="container">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light mb-4 shadow-sm border-bottom">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{{ url_for('index') }}">
+                <i class="fas fa-shield-alt me-2 text-primary"></i>Disaster Awareness Portal
+            </a>
+            <button class="navbar-toggler" type="button" id="mobile-menu-toggle" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="d-flex flex-column align-items-end ms-auto">
+                <ul class="navbar-nav flex-row">
+                    <li class="nav-item"><a class="nav-link text-purple" href="{{ url_for('home') }}"><i class="fas fa-home"></i> HOME</a></li>
+                    <li class="nav-item"><a class="nav-link text-purple" href="chatbot.html"><i class="fa fa-comments"></i> CHATBOT</a></li>
+                    <li class="nav-item"><a class="nav-link text-purple" href="predicts.html"><i class="fa fa-eye"></i> PREDICT</a></li>
+                    <li class="nav-item"><a class="nav-link text-purple" href="disaster_awareness.html"><i class="fa fa-exclamation-triangle"></i> AWARENESS</a></li>
+                    <li class="nav-item"><a class="nav-link text-purple" href="accuracy.html"><i class="fa fa-bullseye"></i> ACCURACY</a></li>
+                </ul>
+                <ul class="navbar-nav flox-row mt-2">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="{{ url_for('quiz') }}">
+                            <i class="fas fa-question-circle me-1 text-primary"></i> Quiz
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('game') }}">
+                            <i class="fas fa-gamepad me-1 text-success"></i> Game
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('videos') }}">
+                            <i class="fas fa-video me-1 text-info"></i> Videos
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('emergency') }}">
+                            <i class="fas fa-phone-alt me-1 text-danger"></i> Emergency
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <h1 class="mb-4 text-center">Test Your Disaster Knowledge</h1>
+    <p class="lead text-center mb-5">
+        Challenge yourself with 10 unique questions about disaster preparedness and response.
+        Each time you take the quiz, you'll see different questions!
+    </p>
+
+    <!-- Quiz Introduction Card -->
+    <div class="card mb-5">
+        <div class="card-header bg-primary text-white">
+            <h3 class="mb-0"><i class="fas fa-info-circle me-2"></i>Quiz Information</h3>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Quiz Rules:</h4>
+                    <ul>
+                        <li>10 random questions about disaster awareness</li>
+                        <li>Each correct answer is worth 10 points</li>
+                        <li>No time limit - take your time to think</li>
+                        <li>Explanations provided after each answer</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <h4>Topics Covered:</h4>
+                    <div class="d-flex flex-wrap gap-2">
+                        <span class="badge bg-primary p-2">Floods</span>
+                        <span class="badge bg-warning text-dark p-2">Landslides</span>
+                        <span class="badge bg-danger p-2">Earthquakes</span>
+                        <span class="badge bg-info p-2">Tsunamis</span>
+                        <span class="badge bg-success p-2">Emergency Kits</span>
+                        <span class="badge bg-secondary p-2">Evacuation</span>
+                    </div>
+                    <div class="mt-4">
+                        <button id="start-quiz-btn" class="btn btn-success btn-lg">
+                            <i class="fas fa-play me-2"></i> Start Quiz
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quiz Container -->
+    <div id="quiz-container" class="mb-4" style="display: none;"></div>
+    <div id="result-container" class="mt-4" style="display: none;"></div>
+
+    <!-- Disaster Preparedness Tips -->
+    <div class="card mt-5">
+        <div class="card-header bg-info text-white">
+            <h3 class="mb-0"><i class="fas fa-lightbulb me-2"></i>Disaster Preparedness Tips</h3>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Before Taking the Quiz:</h4>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <i class="fas fa-check-circle text-success me-2"></i>
+                            Review the educational videos in our Videos section
+                        </li>
+                        <li class="list-group-item">
+                            <i class="fas fa-check-circle text-success me-2"></i>
+                            Familiarize yourself with basic emergency procedures
+                        </li>
+                        <li class="list-group-item">
+                            <i class="fas fa-check-circle text-success me-2"></i>
+                            Learn about the specific disasters common in your area
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <h4>After Taking the Quiz:</h4>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <i class="fas fa-check-circle text-success me-2"></i>
+                            Create or update your family emergency plan
+                        </li>
+                        <li class="list-group-item">
+                            <i class="fas fa-check-circle text-success me-2"></i>
+                            Prepare an emergency kit using the suggestions
+                        </li>
+                        <li class="list-group-item">
+                            <i class="fas fa-check-circle text-success me-2"></i>
+                            Try our interactive Disaster Preparation Game
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/quiz.js') }}"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const startQuizBtn = document.getElementById('start-quiz-btn');
+        const quizContainer = document.getElementById('quiz-container');
+        
+        startQuizBtn.addEventListener('click', function() {
+            document.querySelector('.card.mb-5').style.display = 'none';
+            quizContainer.style.display = 'block';
+        });
+    });
+</script>
+{% endblock %}

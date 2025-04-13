@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='%23000000' d='M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8zm0-12a4 4 0 1 0 4 4 4 4 0 0 0-4-4zm0 6a2 2 0 1 1 2-2 2 2 0 0 1-2 2z'/></svg>">
+    <title>GeoGuard - Accuracy</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="keywords" />
+    <meta content="" name="description" />
+
+    <!-- Favicons 
+    <link
+      href="{{ url_for('static', filename='img/favicon-2.png') }}"
+      rel="icon"
+    />
+    <link href="img/apple-touch-icon.png" rel="apple-touch-icon" />
+-->
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,500,600,700,700i|Montserrat:300,400,500,600,700"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap CSS File -->
+    <link
+      href="{{ url_for('static', filename='lib/bootstrap/css/bootstrap.min.css') }}"
+      rel="stylesheet"
+    />
+
+    <!-- Libraries CSS Files -->
+    <link
+      href="{{ url_for('static', filename='lib/font-awesome/css/font-awesome.min.css') }}"
+      rel="stylesheet"
+    />
+    <link
+      href="{{ url_for('static', filename='lib/animate/animate.min.css') }}"
+      rel="stylesheet"
+    />
+    <link
+      href="{{ url_for('static', filename='lib/ionicons/css/ionicons.min.css') }}"
+      rel="stylesheet"
+    />
+    <link
+      href="{{ url_for('static', filename='lib/owlcarousel/assets/owl.carousel.min.css') }}"
+      rel="stylesheet"
+    />
+    <link
+      href="{{ url_for('static', filename='lib/lightbox/css/lightbox.min.css') }}"
+      rel="stylesheet"
+    />
+    <!-- Main Stylesheet File -->
+    <link
+      href="{{ url_for('static', filename='css/style.css') }}"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  </head>
+
+  <body>
+    <!--==========================
+  Header
+  ============================-->
+    <header id="header">
+      <div id="topbar">
+        <div class="container">
+          <div class="social-links">
+            <!-- <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+            <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+            <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+            <a href="#" class="instagram"><i class="fa fa-instagram"></i></a> -->
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="logo float-left">
+          <!-- Uncomment below if you prefer to use an image logo -->
+          <!-- <h1 class="text-light">
+            <a href="index.html" class="scrollto"><span>FloodGuard</span></a>
+          </h1> -->
+          <a href="home.html" class="scrollto d-flex align-items-center">
+            <img 
+              src="{{ url_for('static', filename='img/logo.png') }}" 
+              alt="Logo" 
+              class="img-fluid" 
+              style="margin-top:-5px; min-height:100px;">
+          </a>
+        </div>
+
+        <nav class="main-nav float-right d-none d-lg-block">
+          <ul>
+            <li class="active"><a href="home.html"><i class="fa fa-home"></i> Home</a></li>
+            <li><a href="chatbot.html"><i class="fa fa-comments"></i> Chatbot</a></li>
+            <li><a href="predicts.html"><i class="fa fa-eye"></i> Predict</a></li>
+            <li><a href="disaster_awareness.html"><i class="fa fa-exclamation-triangle"></i> Awareness</a></li>
+            <li><a href="accuracy.html"><i class="fa fa-bullseye"></i> Accuracy</a></li>
+          </ul>
+        </nav>
+        <!-- .main-nav -->
+      </div>
+    </header>
+    <!-- #header -->
+
+    <section id="book-a-table" class="book-a-table">
+      <div class="container" data-aos="fade-up">
+  
+ <div class="section-title">
+           
+         <center> <p></p></center>
+        </div> 
+  </br>
+ </br>
+ </br>
+  </br>
+ </br>
+ </br>
+  
+</br>
+</br>
+</br>
+
+    <!-- ======= Work Process Section ======= -->
+    <section id="work-process" class="work-process">
+      <div class="container">
+
+        <div class="section-title" data-aos="fade-up">
+          <h2>Accuracy Score</h2>
+                  </div>
+
+        <center><div class="row content">
+           <center><div class="col-md-5" data-aos="fade-right">
+           <center> <img src="{{ url_for('static', filename='img/accuracy.png') }}" width="550" height="300" alt="Flood Detection Machine Learning Project"><center>
+
+          </div>
+          
+            </section><!-- End Work Process Section -->
+
+ <!-- ======= Work Process Section ======= -->
+    <section id="work-process" class="work-process">
+      <div class="container">
+
+        <div class="section-title" data-aos="fade-up">
+          <h2>Features Considered for Training</h2>
+                  </div>
+
+        <center><div class="row content">
+           <center><div class="col-md-5" data-aos="fade-right">
+           <center> <img src="{{ url_for('static', filename='img/featured.png') }}" width="750" height="500" alt="Flood Detection Machine Learning Project">
+          </div>
+          
+            </section><!-- End Work Process Section -->
+
+
+ <!-- ======= Work Process Section ======= -->
+    <section id="work-process" class="work-process">
+      <div class="container">
+
+        <div class="section-title" data-aos="fade-up">
+          <h2>Confusion Matrix</h2>
+                  </div>
+
+        <center><div class="row content">
+           <center><div class="col-md-5" data-aos="fade-right">
+           <center> <img src="{{ url_for('static', filename='img/confusion.png') }}" width="550" height="300" alt="Flood Detection Machine Learning Project"><center>
+
+          </div>
+          
+            </section><!-- End Work Process Section -->
+
+
+
+ 
+
+<!-- ======= Work Process Section ======= -->
+    <section id="work-process" class="work-process">
+      <div class="container">
+
+        <div class="section-title" data-aos="fade-up">
+          <h2>Overall Architecture of the Project</h2>
+                  </div>
+
+        <center><div class="row content">
+           <center><div class="col-md-5" data-aos="fade-right">
+           <img src="{{ url_for('static', filename='img/architecture.jpg') }}" width="800" height="350" alt="Flood Detection Machine Learning Project">
+
+          </div>
+          
+            </section><!-- End Work Process Section -->
+
+			
+			
+			
+			
+			
+			</div>
+          </div>
+        </div>		  
+		  
+		  
+		  
+				  
+		
+		
+		
+		
+      <!-- Portfolio Grid Items -->
+         </div> 
+    </section> 
+   
+
+  <!--==========================
+    Footer
+  ============================-->
+    <footer id="footer" class="section-bg" style="background-color: #f5f8fd;">
+      <div class="footer-top">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="row">
+                <div class="col-sm-11">
+                  <div class="footer-info">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- #footer -->
+
+    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+    <!-- Uncomment below i you want to use a preloader -->
+    <!-- <div id="preloader"></div> -->
+
+    <!-- JavaScript Libraries -->
+    <script src="{{ url_for('static', filename='lib/jquery/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='lib/jquery/jquery-migrate.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='lib/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='lib/easing/easing.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='lib/mobile-nav/mobile-nav.js') }}"></script>
+    <script src="{{ url_for('static', filename='lib/wow/wow.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='lib/waypoints/waypoints.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='lib/counterup/counterup.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='lib/owlcarousel/owl.carousel.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='lib/isotope/isotope.pkgd.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='lib/lightbox/js/lightbox.min.js') }}"></script>
+    <!-- Contact Form JavaScript File -->
+    <script src="{{ url_for('static', filename='contactform/contactform.js') }}"></script>
+
+    <!-- Template Main Javascript File -->
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+  </body>
+</html>
