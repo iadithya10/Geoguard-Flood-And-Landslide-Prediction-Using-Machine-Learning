@@ -1,0 +1,219 @@
+{% extends 'layout.html' %}
+
+{% block title %} - Educational Videos{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1 class="mb-4 text-center">Educational Videos</h1>
+    <p class="lead text-center mb-5">
+        Watch these informative videos to learn about disaster preparedness, response strategies, 
+        and safety measures for various natural disasters.
+    </p>
+
+    <!-- Video categories navigation -->
+    <ul class="nav nav-pills mb-4 justify-content-center" id="videoCategoriesTabs" role="tablist">
+        {% for category in categories %}
+        <li class="nav-item" role="presentation">
+            <button class="nav-link {% if loop.first %}active{% endif %}"
+                    id="tab-{{ category|lower|replace(' ', '-') }}"
+                    data-bs-toggle="tab"
+                    data-bs-target="#content-{{ category|lower|replace(' ', '-') }}"
+                    type="button"
+                    role="tab"
+                    aria-controls="content-{{ category|lower|replace(' ', '-') }}"
+                    aria-selected="{% if loop.first %}true{% else %}false{% endif %}">
+                {% if category == "Flood Awareness" %}
+                <i class="fas fa-water me-2"></i>
+                {% elif category == "Landslide Awareness" %}
+                <i class="fas fa-mountain me-2"></i>
+                {% elif category == "Earthquake Awareness" %}
+                <i class="fas fa-house-damage me-2"></i>
+                {% elif category == "Tsunami Awareness" %}
+                <i class="fas fa-water me-2"></i>
+                {% endif %}
+                {{ category }}
+            </button>
+        </li>
+        {% endfor %}
+    </ul>
+
+    <!-- Video category content -->
+    <div class="tab-content" id="videoCategoriesContent">
+        {% for category in categories %}
+        <div class="tab-pane fade {% if loop.first %}show active{% endif %}"
+            id="content-{{ category|lower|replace(' ', '-') }}"
+            role="tabpanel"
+            aria-labelledby="tab-{{ category|lower|replace(' ', '-') }}">
+            
+            <div class="row g-4">
+                {% for video in videos[category] %}
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="ratio ratio-16x9 card-img-top">
+                            <iframe src="{{ video.embed_code }}" title="{{ video.title }}" allowfullscreen></iframe>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">{{ video.title }}</h5>
+                            <p class="card-text">{{ video.description }}</p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            
+            <!-- Category-specific additional information -->
+            <div class="mt-5">
+                <h3 class="border-bottom pb-2 mb-4">Key Information about {{ category }}</h3>
+                
+                {% if category == "Flood Awareness" %}
+                <div class="row">
+                    <div class="col-md-6">
+                        <h4>Flood Warning Levels</h4>
+                        <div class="list-group mb-4">
+                            <div class="list-group-item list-group-item-action flex-column align-items-start">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1 text-warning">Flood Watch</h5>
+                                </div>
+                                <p class="mb-1">Conditions are favorable for flooding. Stay alert and prepare to take action.</p>
+                            </div>
+                            <div class="list-group-item list-group-item-action flex-column align-items-start">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1 text-danger">Flood Warning</h5>
+                                </div>
+                                <p class="mb-1">Flooding is imminent or already occurring. Take necessary precautions immediately.</p>
+                            </div>
+                            <div class="list-group-item list-group-item-action flex-column align-items-start">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1 text-danger">Flash Flood Warning</h5>
+                                </div>
+                                <p class="mb-1">A flash flood is imminent. Seek higher ground immediately - act fast!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h4>Flood Safety Tips</h4>
+                        <ul class="list-group">
+                            <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i> Never attempt to walk or drive through flood waters</li>
+                            <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i> Six inches of water can knock you down</li>
+                            <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i> One foot of water can float vehicles</li>
+                            <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i> Stay away from power lines and electrical wires</li>
+                            <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i> Have an evacuation plan with family members</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                {% elif category == "Landslide Awareness" %}
+                <div class="row">
+                    <div class="col-md-6">
+                        <h4>Landslide Warning Signs</h4>
+                        <ul class="list-group mb-4">
+                            <li class="list-group-item"><i class="fas fa-exclamation-triangle text-warning me-2"></i> Springs, seeps, or saturated ground appearing in previously dry areas</li>
+                            <li class="list-group-item"><i class="fas fa-exclamation-triangle text-warning me-2"></i> New cracks or unusual bulges in the ground</li>
+                            <li class="list-group-item"><i class="fas fa-exclamation-triangle text-warning me-2"></i> Soil moving away from foundations</li>
+                            <li class="list-group-item"><i class="fas fa-exclamation-triangle text-warning me-2"></i> Tilting trees, utility poles, or walls</li>
+                            <li class="list-group-item"><i class="fas fa-exclamation-triangle text-warning me-2"></i> Rapid increase in creek water levels</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <h4>Landslide Prevention</h4>
+                        <ul class="list-group">
+                            <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i> Plant ground cover on slopes</li>
+                            <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i> Build retaining walls or erosion control structures</li>
+                            <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i> Direct water runoff away from slopes</li>
+                            <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i> Avoid building near steep slopes</li>
+                            <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i> Consult professional engineers before construction</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                {% elif category == "Earthquake Awareness" %}
+                <div class="row">
+                    <div class="col-md-6">
+                        <h4>During an Earthquake</h4>
+                        <ul class="list-group mb-4">
+                            <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i> DROP: Get down on your hands and knees</li>
+                            <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i> COVER: Cover your head and neck with your arms</li>
+                            <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i> HOLD ON: Hold on to sturdy furniture until the shaking stops</li>
+                            <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i> If outdoors, move to an open area away from buildings</li>
+                            <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i> If in a vehicle, pull over to a clear location</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <h4>Earthquake Preparedness</h4>
+                        <ul class="list-group">
+                            <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i> Secure heavy furniture and appliances</li>
+                            <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i> Know where and how to shut off utilities</li>
+                            <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i> Create a family emergency plan</li>
+                            <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i> Prepare an emergency kit</li>
+                            <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i> Practice earthquake drills regularly</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                {% elif category == "Tsunami Awareness" %}
+                <div class="row">
+                    <div class="col-md-6">
+                        <h4>Tsunami Warning Signs</h4>
+                        <ul class="list-group mb-4">
+                            <li class="list-group-item"><i class="fas fa-exclamation-triangle text-warning me-2"></i> Strong earthquake near the coast</li>
+                            <li class="list-group-item"><i class="fas fa-exclamation-triangle text-warning me-2"></i> Unusual water recession exposing ocean floor</li>
+                            <li class="list-group-item"><i class="fas fa-exclamation-triangle text-warning me-2"></i> Loud roaring sound from the ocean</li>
+                            <li class="list-group-item"><i class="fas fa-exclamation-triangle text-warning me-2"></i> Official tsunami warnings or evacuation orders</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <h4>Tsunami Safety</h4>
+                        <ul class="list-group">
+                            <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i> Move immediately to high ground or inland</li>
+                            <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i> Follow evacuation routes and signs</li>
+                            <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i> Stay away from the coast until officials give the all-clear</li>
+                            <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i> If caught in the water, grab onto something that floats</li>
+                            <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i> Know your tsunami evacuation zones</li>
+                        </ul>
+                    </div>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    
+    <!-- Additional resources section -->
+    <div class="card mt-5">
+        <div class="card-header bg-info text-white">
+            <h3 class="mb-0">Additional Resources</h3>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="fas fa-book me-2"></i> Official Guidelines</h5>
+                            <p class="card-text">Access official disaster management guidelines from National Disaster Management Authority (NDMA).</p>
+                            <a href="https://ndma.gov.in/" target="_blank" class="btn btn-outline-primary">Visit Website</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="fas fa-mobile-alt me-2"></i> Mobile Apps</h5>
+                            <p class="card-text">Download disaster alert apps to receive real-time warnings and safety information.</p>
+                            <a href="https://www.ndma.gov.in/Resources/apps" target="_blank" class="btn btn-outline-primary">Explore Apps</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="fas fa-calendar-alt me-2"></i> Training Programs</h5>
+                            <p class="card-text">Find local disaster preparedness training programs and workshops.</p>
+                            <a href="https://nidm.gov.in/default.asp" target="_blank" class="btn btn-outline-primary">Find Training</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

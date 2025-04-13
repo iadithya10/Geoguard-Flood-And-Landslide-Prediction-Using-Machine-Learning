@@ -1,0 +1,184 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    padding: 20px;
+}
+
+/* Custom Styles for Disaster Awareness Portal */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.emergency-contact {
+    transition: transform 0.3s ease;
+}
+
+.emergency-contact:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.emergency-contact .btn {
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.card-header i.fas {
+    animation: pulse 2s infinite;
+}
+
+.card-title {
+    font-weight: bold;
+}
+
+/* Tab content styling */
+.tab-content {
+    padding: 20px;
+    border: 1px solid #444;
+    border-top: none;
+    border-radius: 0 0 0.25rem 0.25rem;
+}
+
+.nav-pills .nav-link.active {
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Quiz Styles */
+.option-btn {
+    transition: all 0.2s ease;
+    margin-bottom: 10px;
+}
+
+.option-btn:hover {
+    transform: translateX(5px);
+}
+
+.option-btn.selected {
+    border-left: 5px solid var(--bs-primary);
+}
+
+/* Game items and animations */
+.champion-screen {
+    background: linear-gradient(135deg, #ffd700 0%, #ffa500 100%);
+    padding: 2rem;
+    border-radius: 1rem;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.champion-badge {
+    animation: champion-pulse 2s infinite;
+}
+
+@keyframes champion-pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+.badge-earned {
+    animation: badge-earned 1s ease;
+}
+
+.option-btn.active {
+    background-color: #007bff;
+    color: white;
+}
+
+#timer-display {
+    font-family: monospace;
+    color: #dc3545;
+    font-weight: bold;
+}
+.badge-item {
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    transition: background-color 0.3s ease;
+    margin-bottom: 8px;
+}
+
+.level-complete-animation {
+    text-align: center;
+    padding: 2rem;
+    animation: slideIn 0.5s ease;
+}
+
+.level-failed-animation {
+    text-align: center;
+    padding: 2rem;
+    animation: shake 0.5s ease;
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-100%); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    75% { transform: translateX(10px); }
+}
+
+@keyframes badge-earned {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.5); }
+    100% { transform: scale(1); }
+}
+
+#game-play-area {
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-outline-primary.active {
+    transform: scale(1.05);
+    transition: transform 0.2s ease;
+}
+
+.badge-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .card-title {
+        font-size: 1.2rem;
+    }
+}

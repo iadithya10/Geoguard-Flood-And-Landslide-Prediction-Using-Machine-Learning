@@ -1,0 +1,48 @@
+{% extends 'layout.html' %}
+
+{% block title %} - Disaster Awareness Quiz{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1 class="mb-4 text-center">Test Your Disaster Knowledge</h1>
+    <p class="lead text-center mb-5">
+        Complete all levels to become a Disaster Preparedness Expert! 
+        Each level has 10 unique questions. Score 70% or higher to advance.
+    </p>
+
+    <!-- Quiz Container -->
+    <div id="quiz-container" class="mb-4"></div>
+    <div id="result-container" class="mt-4" style="display: none;"></div>
+
+    <!-- Level Badges -->
+    <div class="card mt-4">
+        <div class="card-header bg-warning">
+            <h4 class="mb-0">Your Progress</h4>
+        </div>
+        <div class="card-body">
+            <div class="d-flex justify-content-around">
+                <div class="badge-item text-center">
+                    <i class="fas fa-shield-alt fa-2x text-secondary"></i>
+                    <p class="mt-2">Level 1</p>
+                </div>
+                <div class="badge-item text-center">
+                    <i class="fas fa-mountain fa-2x text-secondary"></i>
+                    <p class="mt-2">Level 2</p>
+                </div>
+                <div class="badge-item text-center">
+                    <i class="fas fa-house-damage fa-2x text-secondary"></i>
+                    <p class="mt-2">Level 3</p>
+                </div>
+                <div class="badge-item text-center">
+                    <i class="fas fa-water fa-2x text-secondary"></i>
+                    <p class="mt-2">Level 4</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/quiz.js') }}"></script>
+{% endblock %}

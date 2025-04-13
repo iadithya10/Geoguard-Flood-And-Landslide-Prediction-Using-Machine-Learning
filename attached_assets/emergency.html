@@ -1,0 +1,213 @@
+{% extends 'layout.html' %}
+
+{% block title %} - Emergency Contacts{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1 class="mb-4 text-center">Emergency Helpline Numbers</h1>
+    <p class="lead text-center mb-5">
+        In case of emergency, call these helpline numbers for immediate assistance. 
+        Click on any phone number to dial directly.
+    </p>
+
+    <!-- Search bar -->
+    <div class="row justify-content-center mb-5">
+        <div class="col-md-6">
+            <div class="input-group">
+                <span class="input-group-text"><i class="fas fa-search"></i></span>
+                <input type="text" id="searchContacts" class="form-control" placeholder="Search for a state or emergency service...">
+            </div>
+        </div>
+    </div>
+
+    <!-- National Emergency Numbers -->
+    <div class="card mb-5">
+        <div class="card-header bg-danger text-white">
+            <h3 class="mb-0"><i class="fas fa-phone-alt me-2"></i>National Emergency Services</h3>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                {% for contact in contacts["National"] %}
+                <div class="col-md-4 mb-3">
+                    <div class="emergency-contact p-3 border rounded h-100">
+                        <h5>{{ contact.name }}</h5>
+                        <a href="tel:{{ contact.number }}" class="btn btn-outline-danger">
+                            <i class="fas fa-phone me-2"></i> {{ contact.number }}
+                        </a>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <!-- State-specific Contacts -->
+    <h2 class="mb-4 border-bottom pb-2">State Emergency Services</h2>
+    
+    <!-- Tabs for states -->
+    <ul class="nav nav-tabs mb-4" id="statesTabs" role="tablist">
+        {% for state in states %}
+        {% if state != "National" %}
+        <li class="nav-item" role="presentation">
+            <button class="nav-link {% if loop.first %}active{% endif %}" 
+                    id="tab-{{ state|lower|replace(' ', '-') }}" 
+                    data-bs-toggle="tab" 
+                    data-bs-target="#content-{{ state|lower|replace(' ', '-') }}" 
+                    type="button" 
+                    role="tab" 
+                    aria-controls="content-{{ state|lower|replace(' ', '-') }}" 
+                    aria-selected="{% if loop.first %}true{% else %}false{% endif %}">
+                {{ state }}
+            </button>
+        </li>
+        {% endif %}
+        {% endfor %}
+    </ul>
+    
+    <!-- Tab content -->
+    <div class="tab-content" id="statesTabContent">
+        {% for state in states %}
+        {% if state != "National" %}
+        <div class="tab-pane fade {% if loop.first %}show active{% endif %}" 
+            id="content-{{ state|lower|replace(' ', '-') }}" 
+            role="tabpanel" 
+            aria-labelledby="tab-{{ state|lower|replace(' ', '-') }}">
+            
+            <div class="card mb-4">
+                <div class="card-header bg-primary text-white">
+                    <h4 class="mb-0">{{ state }} Emergency Contacts</h4>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        {% for contact in contacts[state] %}
+                        <div class="col-md-4 mb-3">
+                            <div class="emergency-contact p-3 border rounded h-100">
+                                <h5>{{ contact.name }}</h5>
+                                <a href="tel:{{ contact.number }}" class="btn btn-outline-primary">
+                                    <i class="fas fa-phone me-2"></i> {{ contact.number }}
+                                </a>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+        {% endfor %}
+    </div>
+
+    <!-- Emergency Preparedness Card -->
+    <div class="card mt-5">
+        <div class="card-header bg-warning">
+            <h3 class="mb-0">Emergency Preparedness Tips</h3>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Before a Disaster</h4>
+                    <ul class="list-group list-group-flush mb-4">
+                        <li class="list-group-item"><i class="fas fa-check text-success me-2"></i> Save emergency numbers in your phone</li>
+                        <li class="list-group-item"><i class="fas fa-check text-success me-2"></i> Create a family communication plan</li>
+                        <li class="list-group-item"><i class="fas fa-check text-success me-2"></i> Keep a disaster supply kit ready</li>
+                        <li class="list-group-item"><i class="fas fa-check text-success me-2"></i> Sign up for emergency alerts</li>
+                        <li class="list-group-item"><i class="fas fa-check text-success me-2"></i> Know evacuation routes from your area</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <h4>During a Disaster</h4>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><i class="fas fa-check text-success me-2"></i> Stay calm and follow official instructions</li>
+                        <li class="list-group-item"><i class="fas fa-check text-success me-2"></i> Call emergency services if you need help</li>
+                        <li class="list-group-item"><i class="fas fa-check text-success me-2"></i> Evacuate immediately if advised to do so</li>
+                        <li class="list-group-item"><i class="fas fa-check text-success me-2"></i> Help others if it's safe to do so</li>
+                        <li class="list-group-item"><i class="fas fa-check text-success me-2"></i> Stay informed through emergency broadcasts</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const searchInput = document.getElementById('searchContacts');
+        const statesTabs = document.querySelectorAll('#statesTabs .nav-link');
+        const tabContents = document.querySelectorAll('.tab-pane');
+        const emergencyContacts = document.querySelectorAll('.emergency-contact');
+
+        searchInput.addEventListener('keyup', function() {
+            const searchTerm = this.value.toLowerCase();
+            
+            // If search term is empty, reset the view
+            if (!searchTerm) {
+                statesTabs.forEach(tab => {
+                    tab.parentElement.style.display = 'block';
+                });
+                
+                // Show the first tab as active
+                const firstTab = document.querySelector('#statesTabs .nav-link');
+                const firstTabContent = document.querySelector(firstTab.dataset.bsTarget);
+                
+                statesTabs.forEach(t => t.classList.remove('active'));
+                tabContents.forEach(c => {
+                    c.classList.remove('show', 'active');
+                });
+                
+                firstTab.classList.add('active');
+                firstTabContent.classList.add('show', 'active');
+                
+                // Show all emergency contacts
+                emergencyContacts.forEach(contact => {
+                    contact.parentElement.style.display = 'block';
+                });
+                
+                return;
+            }
+            
+            // Hide all tabs first
+            statesTabs.forEach(tab => {
+                tab.parentElement.style.display = 'none';
+            });
+            
+            // Search in all emergency contacts
+            let foundMatch = false;
+            emergencyContacts.forEach(contact => {
+                const text = contact.textContent.toLowerCase();
+                const matchesSearch = text.includes(searchTerm);
+                contact.parentElement.style.display = matchesSearch ? 'block' : 'none';
+                
+                if (matchesSearch) {
+                    foundMatch = true;
+                    const tabPaneId = contact.closest('.tab-pane').id;
+                    const tabId = 'tab-' + tabPaneId.replace('content-', '');
+                    const correspondingTab = document.getElementById(tabId);
+                    
+                    correspondingTab.parentElement.style.display = 'block';
+                    
+                    // Make this tab active
+                    statesTabs.forEach(t => t.classList.remove('active'));
+                    tabContents.forEach(c => {
+                        c.classList.remove('show', 'active');
+                    });
+                    
+                    correspondingTab.classList.add('active');
+                    document.getElementById(tabPaneId).classList.add('show', 'active');
+                }
+            });
+            
+            // If no matches in state contacts, check national contacts
+            if (!foundMatch) {
+                const nationalContacts = document.querySelectorAll('.card-header.bg-danger').length > 0 ? 
+                    document.querySelector('.card-header.bg-danger').closest('.card').querySelectorAll('.emergency-contact') : [];
+                
+                nationalContacts.forEach(contact => {
+                    const text = contact.textContent.toLowerCase();
+                    const matchesSearch = text.includes(searchTerm);
+                    contact.parentElement.style.display = matchesSearch ? 'block' : 'none';
+                });
+            }
+        });
+    });
+</script>
+{% endblock %}
