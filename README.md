@@ -6,7 +6,7 @@ approach to predict landslide-susceptible areas. By integrating
 various datasets, including historical weather patterns, soil composition, land use, topographical data, and socio-economic indicators, the model aims to provide early warnings and actionable
 insights. The project is developed as a website, which will offer a
 centralized platform for users to access predictions and alerts.
-The landslide prediction model employs machine learning techniques to analyze the likelihood of landslide occurrences, while
+The landslide prediction model employs machine learning techniques to analyze the likelihood of landslide  occurrences, while
 time-series analysis and regression techniques are used to forecast food production and potential shortages. The models are
 validated using real-world data from high-risk regions, and the
 results demonstrate a significant improvement in prediction accuracy compared to traditional methods.
