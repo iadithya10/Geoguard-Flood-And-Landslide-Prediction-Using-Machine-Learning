@@ -16,4 +16,4 @@ prediction accuracy.  The model is trained and validated using
 historical data from flood- and landslide-prone regions in India,
 with a focus on improving early warning systems.  Preliminary
 results demonstrate the effectiveness of this approach in providing timely and reliable predictions, making it a valuable tool for
-disaster management and mitigation efforts
+disaster management and mitigation efforts.
